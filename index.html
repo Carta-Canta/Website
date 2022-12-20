@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 
 <head>
     <meta charset="UTF-8">
@@ -7,17 +7,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta Canta - Home Page</title>
     <link href="css/index.css" type="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
-    <h1>Hello World - test89</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula velit sit amet pulvinar mollis.
-        Suspendisse porta lorem auctor, pharetra massa at, dignissim dui. Aenean a tempor sapien. Morbi commodo
-        ultricies turpis, eu efficitur leo efficitur non. Sed finibus massa ac orci iaculis ornare. Fusce in cursus
-        tellus, at lacinia risus. Nulla quis augue bibendum, pretium mi a, vestibulum dolor. Ut vestibulum sem
-        scelerisque enim placerat, sit amet pretium sem finibus. Nam quis justo imperdiet, posuere sem ac, finibus diam.
-        Aenean tincidunt justo finibus, maximus urna eget, lacinia diam. Quisque egestas magna a diam bibendum
-        hendrerit. Nullam sed felis nulla. </p>
+    <div>
+        <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <h1 class="title is-3">Carta-Canta</h1>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        
+            <div class="navbar-end">
+                <div class="navbar-menu">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Articoli
+                    </a>
+                        
+                    <a class="navbar-item">
+                        Articoli
+                    </a>
+
+                    <a class="navbar-item">
+                        Approfondimenti
+                    </a>
+
+                    <a class="navbar-item">
+                        Sondaggi
+                    </a>
+
+                    <a class="navbar-item">
+                        Giochi
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Info
+                        </a>
+                
+                        <div class="navbar-dropdown is-right">
+                            <a class="navbar-item">
+                                Chi siamo
+                            </a>
+                            <a class="navbar-item">
+                                Perché lo facciamo
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Contatti
+                            </a>
+                        </div>
+                    </div><!--navbar-dropdown-->
+                </div><!--navbar-menu-->
+            </div><!--navbar-end-->
+        </nav>
+
+        <div class="container">
+            <section class="section is-medium">
+                <h1 class="title">Articolo 1</h1>
+                <h2 class="subtitle">
+                    L'Italia è una repubblica <strong>democratica</strong> fondata sul lavoro.
+                </h2>
+            </section>
+
+            <article class="media">
+                <figure class="media-left">
+                    <p class="image is-64x64">
+                        <img src="https://bulma.io/images/placeholders/128x128.png">
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>Paolo Bonolis</strong> <small>@paolino</small> <small>11/09/01</small>
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <br><br><br>
+
+        <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+            <a class="pagination-previous">Precedente</a>
+            <a class="pagination-next">Prossima</a>
+            <ul class="pagination-list">
+                <li>
+                    <a class="pagination-link" aria-label="Goto page 1">1</a>
+                </li>
+                <li>
+                    <span class="pagination-ellipsis">&hellip;</span>
+                </li>
+                <li>
+                    <a class="pagination-link" aria-label="Goto page 4">4</a>
+                </li>
+                <li>
+                    <a class="pagination-link is-current" aria-label="Page 5" aria-current="page">5</a>
+                </li>
+                <li>
+                    <a class="pagination-link" aria-label="Goto page 6">6</a>
+                </li>
+                <li>
+                    <span class="pagination-ellipsis">&hellip;</span>
+                </li>
+                <li>
+                    <a class="pagination-link" aria-label="Goto page 54">54</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
 </body>
 
 </html>
