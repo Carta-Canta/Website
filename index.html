@@ -12,124 +12,154 @@
 
 <body>
     <div>
-        <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="navbar">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
-                    <h1 class="title is-3">Carta-Canta</h1>
-                </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-        
-            <div class="navbar-end">
-                <div class="navbar-menu">
-                    <a class="navbar-item">
-                        Home
+        <nav id="header" class="navbar is-light is-fixed-top" role="navigation" aria-label="navbar">
+            <div class="container is-fluid">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <h1 class="title is-3">Carta-Canta</h1>
                     </a>
 
-                    <a class="navbar-item">
-                        Articoli
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
-                        
-                    <a class="navbar-item">
-                        Articoli
-                    </a>
-
-                    <a class="navbar-item">
-                        Approfondimenti
-                    </a>
-
-                    <a class="navbar-item">
-                        Sondaggi
-                    </a>
-
-                    <a class="navbar-item">
-                        Giochi
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Info
+                </div>
+            
+                <div class="navbar-end">
+                    <div class="navbar-menu">
+                        <a class="navbar-item">
+                            <strong>Home</strong>
                         </a>
-                
-                        <div class="navbar-dropdown is-right">
-                            <a class="navbar-item">
-                                Chi siamo
+
+                        <a class="navbar-item">
+                            Articoli
+                        </a>
+                            
+                        <a class="navbar-item">
+                            Articoli
+                        </a>
+
+                        <a class="navbar-item">
+                            Approfondimenti
+                        </a>
+
+                        <a class="navbar-item">
+                            Sondaggi
+                        </a>
+
+                        <a class="navbar-item">
+                            Giochi
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Info
                             </a>
-                            <a class="navbar-item">
-                                Perché lo facciamo
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item">
-                                Contatti
-                            </a>
-                        </div>
-                    </div><!--navbar-dropdown-->
-                </div><!--navbar-menu-->
-            </div><!--navbar-end-->
+                    
+                            <div class="navbar-dropdown is-right">
+                                <a class="navbar-item">
+                                    Chi siamo
+                                </a>
+                                <a class="navbar-item">
+                                    Perché lo facciamo
+                                </a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item">
+                                    Contatti
+                                </a>
+                            </div>
+                        </div><!--navbar-dropdown-->
+                    </div><!--navbar-menu-->
+                </div><!--navbar-end-->
+            </div>
         </nav>
+    </div>
 
-        <div class="container">
-            <section class="section is-medium">
-                <h1 class="title">Articolo 1</h1>
-                <h2 class="subtitle">
-                    L'Italia è una repubblica <strong>democratica</strong> fondata sul lavoro.
-                </h2>
-            </section>
+    <br>
 
-            <article class="media">
-                <figure class="media-left">
-                    <p class="image is-64x64">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    </p>
-                </figure>
-                <div class="media-content">
-                    <div class="content">
-                        <p>
-                            <strong>Paolo Bonolis</strong> <small>@paolino</small> <small>11/09/01</small>
-                            <br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                        </p>
+    <div class="container is-fluid">
+        <div class="container is-max-widescreen">
+            <div class="columns is-vcentered">
+                <div class="column is-8">
+                    <div class="tabs is-left is-hidden-mobile">
+                        <ul>
+                            <li class="is-active"><a>Tutti</a></li>
+                            <li><a>Articoli Fondamentali</a></li>
+                            <li><a>Sezione 3</a></li>
+                            <li><a>Sezione 4</a></li>
+                        </ul>
                     </div>
+                    <div class="tabs is-centered is-hidden-desktop is-hidden-tablet">
+                        <ul>
+                            <li class="is-active"><a>Tutti</a></li>
+                            <li><a>Articoli Fondamentali</a></li>
+                            <li><a>Sezione 3</a></li>
+                            <li><a>Sezione 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="level-item">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Find a post">
+                            </p>
+                            <p class="control">
+                                <button class="button">
+                                    Search
+                                </button>
+                            </p>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container is-fluid">
+        <div class="container is-max-widescreen">
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child notification is-success is-light box">
+                        <p class="title">Chi siamo?</p>
+                        <p>Carta-Canta è una rivista giornalistica sulla Costituzione Italiana realizzata dalla scuola Secondaria di Secondo Grado "ITTS V. Volterra".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile is-ancestor is-hidden-mobile">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Esplora i nostri giochi!</p>
+                        <p>Nel nostro sito puoi trovare anche alcuni giochi, ovviamente a tema con l'argomento che trattiamo. <a href="">Clicca qui</a> per accederci!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Cosa sono i sondaggi?</p>
+                        <p>I sondaggi sono dei mezzi che noi sfruttiamo costantemente per implementare nuove migliorie qui e non solo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container is-fluid">
+        <div class="container is-max-widescreen">            
+            <article class="message is-medium is-link">
+                <div class="message-header">
+                    <p>Articolo 1</p>
+                </div>
+                <div class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
                 </div>
             </article>
         </div>
-        
-        <br><br><br>
-
-        <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
-            <a class="pagination-previous">Precedente</a>
-            <a class="pagination-next">Prossima</a>
-            <ul class="pagination-list">
-                <li>
-                    <a class="pagination-link" aria-label="Goto page 1">1</a>
-                </li>
-                <li>
-                    <span class="pagination-ellipsis">&hellip;</span>
-                </li>
-                <li>
-                    <a class="pagination-link" aria-label="Goto page 4">4</a>
-                </li>
-                <li>
-                    <a class="pagination-link is-current" aria-label="Page 5" aria-current="page">5</a>
-                </li>
-                <li>
-                    <a class="pagination-link" aria-label="Goto page 6">6</a>
-                </li>
-                <li>
-                    <span class="pagination-ellipsis">&hellip;</span>
-                </li>
-                <li>
-                    <a class="pagination-link" aria-label="Goto page 54">54</a>
-                </li>
-            </ul>
-        </nav>
     </div>
-    
 </body>
 
 </html>
