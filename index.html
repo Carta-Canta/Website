@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta Canta - Home Page</title>
-    <link href="css/index.css" type="stylesheet">
+    <link href="css/style.css" type="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
@@ -19,13 +19,14 @@
                         <h1 class="title is-3">Carta-Canta</h1>
                     </a>
 
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
-            
+
                 <div class="navbar-end">
                     <div class="navbar-menu">
                         <a class="navbar-item">
@@ -35,7 +36,7 @@
                         <a class="navbar-item">
                             Articoli
                         </a>
-                        
+
                         <a class="navbar-item">
                             Approfondimenti
                         </a>
@@ -52,7 +53,7 @@
                             <a class="navbar-link">
                                 Info
                             </a>
-                    
+
                             <div class="navbar-dropdown is-right">
                                 <a class="navbar-item">
                                     Chi siamo
@@ -98,20 +99,45 @@
                 <div class="column">
                     <div class="level-item">
                         <div class="field has-addons">
+                            <form onsubmit="search(); return false">
+                                <p class="control">
+                                    <input class="input" type="text" placeholder="Find a post" id="nomeArticolo">
+                                </p>
+                            </form>
+                            <div class="navbar-dropdown is-right">
+                                Data inizio
+                                <input id="dataInizio" type="date" value="">
+                                Data fine
+                                <input id="dataFine" type="date" value="">
+                            </div>
+
                             <p class="control">
-                                <input class="input" type="text" placeholder="Find a post">
-                            </p>
-                            <p class="control">
-                                <button class="button">
+                                <button class="button" onclick="search()">
                                     Search
                                 </button>
                             </p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container is-fluid center is-justify-content-center">
+        <div id="result" class="has-text-centred is-justify-content-center">
+            <h1 id="nRisultati"></h1>
+            <div id="mydiv">
+                <p>nothing</p>
+            </div>
+            <div id="mydiv1">
+                <p>nothing1</p>
+            </div>
+            <div id="mydiv2">
+                <p>nothing2</p>
+            </div>
+        </div>
+    </div>
+
 
     <br>
 
@@ -121,7 +147,8 @@
                 <div class="tile is-parent">
                     <div class="tile is-child notification is-success is-light box">
                         <p class="title">Chi siamo?</p>
-                        <p>Carta-Canta è una rivista giornalistica sulla Costituzione Italiana realizzata dalla scuola Secondaria di Secondo Grado "ITTS V. Volterra".</p>
+                        <p>Carta-Canta è una rivista giornalistica sulla Costituzione Italiana realizzata dalla scuola
+                            Secondaria di Secondo Grado "ITTS V. Volterra".</p>
                     </div>
                 </div>
             </div>
@@ -129,13 +156,15 @@
                 <div class="tile is-parent">
                     <div class="tile is-child box">
                         <p class="title">Esplora i nostri giochi!</p>
-                        <p>Nel nostro sito puoi trovare anche alcuni giochi, ovviamente a tema con l'argomento che trattiamo. <a href="">Clicca qui</a> per accederci!</p>
+                        <p>Nel nostro sito puoi trovare anche alcuni giochi, ovviamente a tema con l'argomento che
+                            trattiamo. <a href="">Clicca qui</a> per accederci!</p>
                     </div>
                 </div>
                 <div class="tile is-parent">
                     <div class="tile is-child box">
                         <p class="title">Cosa sono i sondaggi?</p>
-                        <p>I sondaggi sono dei mezzi che noi sfruttiamo costantemente per implementare nuove migliorie qui e non solo.</p>
+                        <p>I sondaggi sono dei mezzi che noi sfruttiamo costantemente per implementare nuove migliorie
+                            qui e non solo.</p>
                     </div>
                 </div>
             </div>
@@ -145,17 +174,20 @@
     <br><br>
 
     <div class="container is-fluid">
-        <div class="container is-max-widescreen">            
+        <div class="container is-max-widescreen">
             <article class="message is-medium is-link">
                 <div class="message-header">
                     <p>Articolo 1</p>
                 </div>
                 <div class="message-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
                 </div>
             </article>
         </div>
     </div>
 </body>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 
 </html>

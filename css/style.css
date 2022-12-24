@@ -1,0 +1,11 @@
+.hide {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+#result div{
+    display: none;
+}
