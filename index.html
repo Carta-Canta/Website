@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carta Canta - Home Page</title>
     <link href="css/style.css" type="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -29,11 +30,11 @@
 
                 <div class="navbar-end">
                     <div class="navbar-menu">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="#">
                             <strong>Home</strong>
                         </a>
 
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="./html/articoli/">
                             Articoli
                         </a>
 
@@ -96,44 +97,64 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="column">
                     <div class="level-item">
                         <div class="field has-addons">
                             <form onsubmit="search(); return false">
-                                <p class="control">
-                                    <input class="input" type="text" placeholder="Find a post" id="nomeArticolo">
+                                <p class="control has-icons-right">
+                                    <input class="input" type="text" placeholder="Cerca un articolo" id="nomeArticolo">
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-search"></i>
+                                    </span>
                                 </p>
-                            </form>
-                            <div class="navbar-dropdown is-right">
-                                Data inizio
-                                <input id="dataInizio" type="date" value="">
-                                Data fine
-                                <input id="dataFine" type="date" value="">
-                            </div>
 
-                            <p class="control">
-                                <button class="button" onclick="search()">
-                                    Search
-                                </button>
-                            </p>
+                            </form>
+                            <div class="control">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger">
+                                        <button class="button is-link" aria-haspopup="true"
+                                            aria-controls="dropdown-menu4">
+                                            <span>Filtri</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="dropdown-item">
+                                                <div class="">
+                                                    <h3>Data inizio</h3>
+                                                    <input id="dataInizio" type="date" value="">
+                                                    <br>Data fine
+                                                    <input id="dataFine" type="date" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
     <div class="container is-fluid center is-justify-content-center">
         <div id="result" class="has-text-centred is-justify-content-center">
-            <h1 id="nRisultati"></h1>
+            <h1 class="has-text-centered " id="nRisultati"></h1>
             <div id="mydiv">
-                <p>nothing</p>
+                <p class="has-text-centered">nothing</p>
             </div>
             <div id="mydiv1">
-                <p>nothing1</p>
+                <p class="has-text-centered">nothing1</p>
             </div>
             <div id="mydiv2">
-                <p>nothing2</p>
+                <p class="has-text-centered">nothing2</p>
             </div>
         </div>
     </div>
@@ -152,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tile is-ancestor is-hidden-mobile">
+            <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <div class="tile is-child box">
                         <p class="title">Esplora i nostri giochi!</p>

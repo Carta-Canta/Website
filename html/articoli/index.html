@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carta Canta - Articoli</title>
+    <link href="css/style.css" type="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div>
+        <nav id="header" class="navbar is-light is-fixed-top" role="navigation" aria-label="navbar">
+            <div class="container is-fluid">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <h1 class="title is-3">Carta-Canta</h1>
+                    </a>
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-menu">
+                        <a class="navbar-item" href="../../index.html">
+                            Home
+                        </a>
+
+                        <a class="navbar-item">
+                            <strong>Articoli</strong>
+                        </a>
+
+                        <a class="navbar-item">
+                            Approfondimenti
+                        </a>
+
+                        <a class="navbar-item">
+                            Sondaggi
+                        </a>
+
+                        <a class="navbar-item">
+                            Giochi
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Info
+                            </a>
+
+                            <div class="navbar-dropdown is-right">
+                                <a class="navbar-item">
+                                    Chi siamo
+                                </a>
+                                <a class="navbar-item">
+                                    Perché lo facciamo
+                                </a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item">
+                                    Contatti
+                                </a>
+                            </div>
+                        </div><!--navbar-dropdown-->
+                    </div><!--navbar-menu-->
+                </div><!--navbar-end-->
+            </div>
+        </nav>
+    </div>
+
+    <br>
+
+    <div class="container is-fluid">
+        <div class="container is-max-widescreen">
+            <div class="columns is-vcentered">
+                <div class="column is-8">
+                    <div class="tabs is-left is-hidden-mobile">
+                        <ul>
+                            <li class="is-active"><a>Tutti</a></li>
+                            <li><a>Articoli Fondamentali</a></li>
+                            <li><a>Sezione 3</a></li>
+                            <li><a>Sezione 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="tabs is-centered is-hidden-desktop is-hidden-tablet">
+                        <ul>
+                            <li class="is-active"><a>Tutti</a></li>
+                            <li><a>Articoli Fondamentali</a></li>
+                            <li><a>Sezione 3</a></li>
+                            <li><a>Sezione 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="level-item">
+                        <div class="field has-addons">
+                            <form onsubmit="search(); return false">
+                                <p class="control has-icons-right">
+                                    <input class="input" type="text" placeholder="Cerca un articolo" id="nomeArticolo">
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </p>
+
+                            </form>
+                            <div class="control">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger">
+                                        <button class="button is-link" aria-haspopup="true"
+                                            aria-controls="dropdown-menu4">
+                                            <span>Filtri</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="dropdown-item">
+                                                <div class="">
+                                                    <h3>Data inizio</h3>
+                                                    <input id="dataInizio" type="date" value="">
+                                                    <br>Data fine
+                                                    <input id="dataFine" type="date" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container is-fluid center is-justify-content-center">
+        <div id="result" class="has-text-centred is-justify-content-center">
+            <h1 class="has-text-centered " id="nRisultati"></h1>
+            <div id="mydiv">
+                <p class="has-text-centered">nothing</p>
+            </div>
+            <div id="mydiv1">
+                <p class="has-text-centered">nothing1</p>
+            </div>
+            <div id="mydiv2">
+                <p class="has-text-centered">nothing2</p>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    <div class="container is-fluid">
+        <div class="container is-max-widescreen">
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child notification is-success is-light box">
+                        <p class="title">Lista Articoli</p>
+                        <p>Ecco qua la lista degli articoli</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Esplora i nostri giochi!</p>
+                        <p>Nel nostro sito puoi trovare anche alcuni giochi, ovviamente a tema con l'argomento che
+                            trattiamo. <a href="">Clicca qui</a> per accederci!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Cosa sono i sondaggi?</p>
+                        <p>I sondaggi sono dei mezzi che noi sfruttiamo costantemente per implementare nuove migliorie
+                            qui e non solo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container is-fluid">
+        <div class="container is-max-widescreen">
+            <article class="message is-medium is-link">
+                <div class="message-header">
+                    <p>Articolo 1</p>
+                </div>
+                <div class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+<script src="../../js/data.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>
