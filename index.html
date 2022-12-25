@@ -8,7 +8,9 @@
     <title>Carta Canta - Home Page</title>
     <link href="css/style.css" type="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -99,38 +101,34 @@
                 </div>
 
                 <div class="column">
-                    <div class="level-item">
-                        <div class="field has-addons">
-                            <form onsubmit="search(); return false">
-                                <p class="control has-icons-right">
-                                    <input class="input" type="text" placeholder="Cerca un articolo" id="nomeArticolo">
-                                    <span class="icon is-small is-right">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </p>
-
-                            </form>
-                            <div class="control">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <button class="button is-link" aria-haspopup="true"
-                                            aria-controls="dropdown-menu4">
-                                            <span>Filtri</span>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <br>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="dropdown-item">
-                                                <div class="">
-                                                    <h3>Data inizio</h3>
-                                                    <input id="dataInizio" type="date" value="">
-                                                    <br>Data fine
-                                                    <input id="dataFine" type="date" value="">
-                                                </div>
+                    <div class="field has-addons">
+                        <div class="control">
+                            <p class="control has-icons-right">
+                                <input class="input" type="text" placeholder="Cerca un articolo" id="nomeArticolo">
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button is-link" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <span>Filtri</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <br>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <div class="">
+                                                <h3>Data inizio</h3>
+                                                <input id="dataInizio" type="date" value="">
+                                                <br>Data fine
+                                                <input id="dataFine" type="date" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -141,6 +139,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
 
