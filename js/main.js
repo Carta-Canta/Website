@@ -1,3 +1,4 @@
+//Al'avvio eseguo la funzione hide()
 window.onload = hide();
 
 // Nascondo i div del risultato della ricerca
