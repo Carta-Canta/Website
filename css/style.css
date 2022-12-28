@@ -50,6 +50,7 @@
 /*CUSTOM SCROLLBAR*/
 
 html{
+    scroll-behavior: smooth;
     scrollbar-width: normal;
     scrollbar-color: #777 #555;
 }
@@ -71,3 +72,10 @@ html::-webkit-scrollbar-track{
 }
 
 /*CUSTOM SCROLLBAR END*/
+
+/*ARTICLES TITLE*/
+
+.articles-title{
+    font-weight: 800;
+    font-size: xx-large;
+}
