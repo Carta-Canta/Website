@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carta Canta - Articoli</title>
-    <link href="css/style.css" type="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         <nav id="header" class="navbar is-light is-fixed-top" role="navigation" aria-label="navbar">
             <div class="container is-fluid">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="index.html">
+                    <a class="navbar-item logo-hover" href="index.html">
                         <h1 class="title is-3">Carta-Canta</h1>
                     </a>
 
@@ -30,11 +33,11 @@
 
                 <div class="navbar-end">
                     <div class="navbar-menu">
-                        <a class="navbar-item" href="../../index.html">
+                        <a class="navbar-item" href="/index.html">
                             Home
                         </a>
 
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="#">
                             <strong>Articoli</strong>
                         </a>
 
@@ -74,17 +77,34 @@
         </nav>
     </div>
 
+    <div class="container is-max-desktop">
+        <div class="container is-fluid">
+            <hr>
+        </div>
+    </div>
+
+    <div class="container is-max-widescreen has-text-centered">
+        <p class="articles-title">ARTICOLI</p>
+    </div>
+
+    <div class="container is-max-desktop">
+        <div class="container is-fluid">
+            <hr>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------SUB NAVBAR------------------------------------------------------>
     <br>
 
     <div class="container is-fluid">
         <div class="container is-max-widescreen">
-            <div class="columns is-vcentered">
-                <div class="column is-8">
+            <div class="columns is-centered">
+                <div class="column is-three-quarters">
                     <div class="tabs is-left is-hidden-mobile">
                         <ul>
                             <li class="is-active"><a>Tutti</a></li>
                             <li><a>Articoli Fondamentali</a></li>
-                            <li><a>Sezione 3</a></li>
+                            <li><a>I più interessanti</a></li>
                             <li><a>Sezione 4</a></li>
                         </ul>
                     </div>
@@ -92,45 +112,45 @@
                         <ul>
                             <li class="is-active"><a>Tutti</a></li>
                             <li><a>Articoli Fondamentali</a></li>
-                            <li><a>Sezione 3</a></li>
+                            <li><a>I più interessanti</a></li>
                             <li><a>Sezione 4</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="column">
-                    <div class="level-item">
-                        <div class="field has-addons">
+                    <div class="field has-addons">
+                        <div class="control">
                             <form onsubmit="search(); return false">
-                                <p class="control has-icons-right">
-                                    <input class="input" type="text" placeholder="Cerca un articolo" id="nomeArticolo">
-                                    <span class="icon is-small is-right">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </p>
 
-                            </form>
-                            <div class="control">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <button class="button is-link" aria-haspopup="true"
-                                            aria-controls="dropdown-menu4">
-                                            <span>Filtri</span>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <br>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="dropdown-item">
-                                                <div class="">
-                                                    <h3>Data inizio</h3>
-                                                    <input id="dataInizio" type="date" value="">
-                                                    <br>Data fine
-                                                    <input id="dataFine" type="date" value="">
-                                                </div>
+                            <p class="control has-icons-right">
+                                <input class="input" type="text" placeholder="Cerca un articolo" id="nomeArticolo">
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </p>
+                        </form>
+
+                        </div>
+                        <div class="control">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button is-link" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <span>Filtri</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <br>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <div class="">
+                                                <p>Data Inizio</p>
+                                                <input id="dataInizio" type="date" value="">
+                                                <br>Data fine
+                                                <input id="dataFine" type="date" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -143,12 +163,13 @@
         </div>
     </div>
     </div>
+    </div>
 
     <div class="container is-fluid center is-justify-content-center">
         <div id="result" class="has-text-centred is-justify-content-center">
             <h1 class="has-text-centered " id="nRisultati"></h1>
             <div id="mydiv">
-                <p class="has-text-centered">nothing</p>
+                <p class="has-text-centered">Search 1</p>
             </div>
             <div id="mydiv1">
                 <p class="has-text-centered">nothing1</p>
@@ -156,58 +177,157 @@
             <div id="mydiv2">
                 <p class="has-text-centered">nothing2</p>
             </div>
-        </div>
-    </div>
-
-
-    <br>
-
-    <div class="container is-fluid">
-        <div class="container is-max-widescreen">
-            <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                    <div class="tile is-child notification is-success is-light box">
-                        <p class="title">Lista Articoli</p>
-                        <p>Ecco qua la lista degli articoli</p>
-                    </div>
-                </div>
-            </div>
-            <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <p class="title">Esplora i nostri giochi!</p>
-                        <p>Nel nostro sito puoi trovare anche alcuni giochi, ovviamente a tema con l'argomento che
-                            trattiamo. <a href="">Clicca qui</a> per accederci!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <p class="title">Cosa sono i sondaggi?</p>
-                        <p>I sondaggi sono dei mezzi che noi sfruttiamo costantemente per implementare nuove migliorie
-                            qui e non solo.</p>
+            <div class="container is-max-desktop">
+                <div class="container is-fluid">
+                    <div class="container is-fluid">
+                        <div class="container is-fluid">
+                            <div class="container is-fluid">
+                                <div class="container is-fluid">
+                                    <div class="container is-fluid">
+                                        <div class="container is-fluid">
+                                            <div class="container is-fluid">
+                                                <div class="container is-fluid">
+                                                    <!--QUALCUNO CHE SA JS FACCIA SI CHE QUESTO HR COMPAIA QUANDO 
+                                                        CERCHI QUALCOSA SIA CON CHE SENZA RISULTATI GRAZIE :)
+                                                        P.S. IO CI HO PROVATO SU MAIN.JS e DATA.JS E SEMBRA FUNZIONARE
+                                                        MA PER ORA COMPARE SOLO SE CERCHI EXAMPLE, IO VORREI CHE
+                                                        COMPARISSE QUALSIASI COSA TU SCRIVI, GRAZIE-->
+                                                    <hr id="searchHR" style="margin-top: 10px; margin-bottom: 0;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <br><br>
+<!---------------------------------------------------------ARTICOLI------------------------------------------------------>
 
     <div class="container is-fluid">
         <div class="container is-max-widescreen">
-            <article class="message is-medium is-link">
+            <article class="message is-medium is-link article-hover-effect">
                 <div class="message-header">
-                    <p>Articolo 1</p>
+                    <p>Intervista all'esperto Rodolfo Marchisio</p>
+                    <span class="tag is-info is-light is-rounded default-cursor">10 Gennaio 2024</span>
                 </div>
                 <div class="message-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                    <p class="title">Chi è?</p>
+                    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dictum tellus. 
+                    Praesent vitae iaculis leo. Duis metus leo, malesuada sit amet dapibus eget, bibendum id elit. 
+                    Morbi dui felis, auctor eget tristique sit amet, lobortis eget enim. Sed quis ante vel nisi 
+                    tristique iaculis. Morbi condimentum id mi ac aliquet. Phasellus semper, erat at accumsan feugiat, 
+                    quam arcu elementum mauris, ut fringilla elit quam vel nibh. In molestie, mauris vitae auctor gravida, 
+                    nunc mauris tristique nulla, eget lobortis sem sem nec justo. Aliquam at diam bibendum, 
+                    malesuada mi vitae, euismod sem.</p>
+                    <p class="title">Di cosa si occupa?</p>
+                    <p class="subtitle">Vestibulum vitae scelerisque tortor, vel commodo leo. Curabitur efficitur euismod lectus, 
+                    nec convallis sem molestie a. Ut id est vel libero malesuada aliquam. 
+                    Pellentesque pretium ligula velit, eget accumsan ipsum aliquam in. 
+                    Aenean congue justo in blandit fringilla. Aenean nisi lorem, fermentum et tincidunt eu, 
+                    finibus nec lacus. Nam auctor purus molestie metus tincidunt commodo. 
+                    Donec ut tellus ut odio venenatis sodales. Curabitur at erat posuere, cursus orci maximus, 
+                    posuere ipsum. Suspendisse turpis enim, tincidunt eu lacus eget, dignissim rhoncus turpis. 
+                    Cras id purus tempor, sagittis ipsum in, cursus enim. Proin in sapien dapibus, dictum nulla eu, 
+                    vestibulum eros. Curabitur blandit vel elit in consectetur. Aliquam sit amet nisl id ligula 
+                    vestibulum sagittis. Nullam sit amet condimentum nibh, at vestibulum odio.</p>
+                </div>
+            </article>
+
+            <article class="message is-medium is-link article-hover-effect">
+                <div class="message-header">
+                    <p>Se ci fosse tolto un diritto, come cambierebbe la nostra vita?</p>
+                    <span class="tag is-info is-light is-rounded default-cursor">11 Gennaio 2024</span>
+                </div>
+                <div class="message-body">
+                    <p class="subtitle">Vestibulum vitae scelerisque tortor, vel commodo leo. Curabitur efficitur euismod lectus, 
+                    nec convallis sem molestie a. Ut id est vel libero malesuada aliquam. 
+                    Pellentesque pretium ligula velit, eget accumsan ipsum aliquam in. 
+                    Aenean congue justo in blandit fringilla. Aenean nisi lorem, fermentum et tincidunt eu, 
+                    finibus nec lacus. Nam auctor purus molestie metus tincidunt commodo. 
+                    Donec ut tellus ut odio venenatis sodales. Curabitur at erat posuere, cursus orci maximus, 
+                    posuere ipsum. Suspendisse turpis enim, tincidunt eu lacus eget, dignissim rhoncus turpis. 
+                    Cras id purus tempor, sagittis ipsum in, cursus enim. Proin in sapien dapibus, dictum nulla eu, 
+                    vestibulum eros. Curabitur blandit vel elit in consectetur. Aliquam sit amet nisl id ligula 
+                    vestibulum sagittis. Nullam sit amet condimentum nibh, at vestibulum odio.</p>
+                </div>
+            </article>
+
+            <article class="message is-medium is-link article-hover-effect">
+                <div class="message-header">
+                    <p>Isola deserta...</p>
+                    <span class="tag is-info is-light is-rounded default-cursor">12 Gennaio 2024</span>
+                </div>
+                <div class="message-body">
+                    <p class="title">Servono delle regole? Quali?</p>
+                    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dictum tellus. 
+                    Praesent vitae iaculis leo. Duis metus leo, malesuada sit amet dapibus eget, bibendum id elit. 
+                    Morbi dui felis, auctor eget tristique sit amet, lobortis eget enim. Sed quis ante vel nisi 
+                    tristique iaculis. Morbi condimentum id mi ac aliquet. Phasellus semper, erat at accumsan feugiat, 
+                    quam arcu elementum mauris, ut fringilla elit quam vel nibh. In molestie, mauris vitae auctor gravida, 
+                    nunc mauris tristique nulla, eget lobortis sem sem nec justo. Aliquam at diam bibendum, 
+                    malesuada mi vitae, euismod sem.</p>
+                    <p class="title">Analogie con la Costituzione</p>
+                    <p class="subtitle">Vestibulum vitae scelerisque tortor, vel commodo leo. Curabitur efficitur euismod lectus, 
+                    nec convallis sem molestie a. Ut id est vel libero malesuada aliquam. 
+                    Pellentesque pretium ligula velit, eget accumsan ipsum aliquam in. 
+                    Aenean congue justo in blandit fringilla. Aenean nisi lorem, fermentum et tincidunt eu, 
+                    finibus nec lacus. Nam auctor purus molestie metus tincidunt commodo. 
+                    Donec ut tellus ut odio venenatis sodales. Curabitur at erat posuere, cursus orci maximus, 
+                    posuere ipsum. Suspendisse turpis enim, tincidunt eu lacus eget, dignissim rhoncus turpis. 
+                    Cras id purus tempor, sagittis ipsum in, cursus enim. Proin in sapien dapibus, dictum nulla eu, 
+                    vestibulum eros. Curabitur blandit vel elit in consectetur. Aliquam sit amet nisl id ligula 
+                    vestibulum sagittis. Nullam sit amet condimentum nibh, at vestibulum odio.</p>
+                </div>
+            </article>
+
+            <article class="message is-medium is-link article-hover-effect">
+                <div class="message-header">
+                    <p>Raccontare la scrittura di un articolo della Costituzione: il dialogo tra i Costituenti
+                    </p>
+                    <span class="tag is-info is-light is-rounded default-cursor">13 Gennaio 2024</span>
+                </div>
+                <div class="message-body">
+                    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dictum tellus. 
+                    Praesent vitae iaculis leo. Duis metus leo, malesuada sit amet dapibus eget, bibendum id elit. 
+                    Morbi dui felis, auctor eget tristique sit amet, lobortis eget enim. Sed quis ante vel nisi 
+                    tristique iaculis. Morbi condimentum id mi ac aliquet. Phasellus semper, erat at accumsan feugiat, 
+                    quam arcu elementum mauris, ut fringilla elit quam vel nibh. In molestie, mauris vitae auctor gravida, 
+                    nunc mauris tristique nulla, eget lobortis sem sem nec justo. Aliquam at diam bibendum, 
+                    malesuada mi vitae, euismod sem.</p>
+                </div>
+            </article>
+
+            <article class="message is-medium is-link article-hover-effect">
+                <div class="message-header">
+                    <p>E se non si potessero usare certe parole? Cambiare le parole obsolete e usare un vocabolario più semplice-moderno-ridotto? </p>
+                    <span class="tag is-info is-light is-rounded default-cursor">15 Gennaio 2024</span>
+                </div>
+                <div class="message-body">
+                    <p class="subtitle">Vestibulum vitae scelerisque tortor, vel commodo leo. Curabitur efficitur euismod lectus, 
+                    nec convallis sem molestie a. Ut id est vel libero malesuada aliquam. 
+                    Pellentesque pretium ligula velit, eget accumsan ipsum aliquam in. 
+                    Aenean congue justo in blandit fringilla. Aenean nisi lorem, fermentum et tincidunt eu, 
+                    finibus nec lacus. Nam auctor purus molestie metus tincidunt commodo. 
+                    Donec ut tellus ut odio venenatis sodales. Curabitur at erat posuere, cursus orci maximus, 
+                    posuere ipsum. Suspendisse turpis enim, tincidunt eu lacus eget, dignissim rhoncus turpis. 
+                    Cras id purus tempor, sagittis ipsum in, cursus enim. Proin in sapien dapibus, dictum nulla eu, 
+                    vestibulum eros. Curabitur blandit vel elit in consectetur. Aliquam sit amet nisl id ligula 
+                    vestibulum sagittis. Nullam sit amet condimentum nibh, at vestibulum odio.</p>
                 </div>
             </article>
         </div>
     </div>
+    <br>
 </body>
-<script src="../../js/data.js"></script>
-<script src="../../js/main.js"></script>
+
+<!--SCRIPTs-->
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 
 </html>
