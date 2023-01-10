@@ -101,3 +101,8 @@ html::-webkit-scrollbar-track{
 .default-cursor{
     cursor: default;
 }
+
+.hero-rounded-borders{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
