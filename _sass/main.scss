@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+$navbar-background-color: #ebf4ff;
+$navbar-item-hover-background-color: #e7f3ff;
+$navbar-item-color: #3e3e3f;
+$body-background-color: #f3f8ff;
+$link: #82BAFE;
+
+.hide {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+#result div {
+  display: none;
+}
+
+.hover-effect {
+  transition: 0.3s;
+}
+.hover-effect:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.article-hover-effect {
+  transition: 0.3s;
+}
+.article-hover-effect:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 1px 2px 3px 1px, rgba(60, 64, 67, 0.15) 1px 2px 4px 2px;
+}
+
+.logo-hover {
+  transition: 0.3s;
+}
+.logo-hover:hover {
+  box-shadow: rgba(22, 86, 234, 0.4) 0px 5px, rgba(22, 86, 234, 0.3) 0px 10px, rgba(22, 86, 234, 0.2) 0px 15px, rgba(22, 86, 234, 0.1) 0px 20px, rgba(22, 86, 234, 0.05) 0px 25px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  scrollbar-color: #777 #555;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(119, 119, 119, 0.3333333333);
+  border-radius: 12px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+html::-webkit-scrollbar-track {
+  background-color: rgba(85, 85, 85, 0.1);
+}
+
+.articles-title {
+  font-weight: 800;
+  font-size: xx-large;
+}
+
+.goto-articles {
+  text-decoration: none !important;
+}
+
+.goto-articles-redirect-icon {
+  position: relative;
+  bottom: -5px;
+}
+
+.article-title {
+  text-decoration: none !important;
+}
+
+.default-cursor {
+  cursor: default;
+}
+
+.hero-rounded-borders {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+@import "../node_modules/bulma/bulma";
