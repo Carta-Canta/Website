@@ -23,7 +23,8 @@
                     </a>
 
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                        data-target="navbarBasicExample">
+                        data-target="navMenu">
+                        <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="navbar-end">
-                    <div class="navbar-menu">
+                    <div class="navbar-menu" id="navMenu">
                         <a class="navbar-item" href="/index.html">
                             Home
                         </a>
@@ -57,7 +58,7 @@
                                 Info
                             </a>
 
-                            <div class="navbar-dropdown is-right">
+                            <div class="navbar-dropdown is-right is-active">
                                 <a class="navbar-item">
                                     Chi siamo
                                 </a>
@@ -322,11 +323,9 @@
         </div>
     </div>
     <br>
+
+    <script src="../../lib/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 </body>
-
-<!--SCRIPTs-->
-
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
-
 </html>
