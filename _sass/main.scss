@@ -31,37 +31,10 @@ $navbar-item-color: #3e3e3f;
 $body-background-color: #f3f8ff;
 $link: #82BAFE;
 
-.hide {
-  display: none;
-}
+/*NON CLASSEs*/
 
-.center {
-  text-align: center;
-}
-
-#result div {
-  display: none;
-}
-
-.hover-effect {
-  transition: 0.3s;
-}
-.hover-effect:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-}
-
-.article-hover-effect {
-  transition: 0.3s;
-}
-.article-hover-effect:hover {
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 0px 5px 3px, rgba(60, 64, 67, 0.15) 1px 2px 4px 2px;
-}
-
-.logo-hover {
-  transition: 0.3s;
-}
-.logo-hover:hover {
-  box-shadow: rgba(22, 86, 234, 0.4) 0px 5px, rgba(22, 86, 234, 0.3) 0px 10px, rgba(22, 86, 234, 0.2) 0px 15px, rgba(22, 86, 234, 0.1) 0px 20px, rgba(22, 86, 234, 0.05) 0px 25px;
+hr{
+  background-color: #9c9c9ca6 !important;
 }
 
 html {
@@ -81,6 +54,48 @@ html::-webkit-scrollbar-thumb:hover {
 }
 html::-webkit-scrollbar-track {
   background-color: rgba(85, 85, 85, 0.1);
+}
+
+img{
+  border-radius: 5px;
+}
+
+/*CLASSEs*/
+
+.hide {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+#result div {
+  display: none;
+}
+
+.hover-effect {
+  transition: 0.3s;
+}
+
+.hover-effect:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.article-hover-effect {
+  transition: 0.3s;
+}
+
+.article-hover-effect:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 0px 5px 3px, rgba(60, 64, 67, 0.15) 1px 2px 4px 2px;
+}
+
+.logo-hover {
+  transition: 0.3s;
+}
+
+.logo-hover:hover {
+  box-shadow: rgba(22, 86, 234, 0.4) 0px 5px, rgba(22, 86, 234, 0.3) 0px 10px, rgba(22, 86, 234, 0.2) 0px 15px, rgba(22, 86, 234, 0.1) 0px 20px, rgba(22, 86, 234, 0.05) 0px 25px;
 }
 
 .articles-title {
@@ -110,7 +125,16 @@ html::-webkit-scrollbar-track {
   border-top-right-radius: 6px;
 }
 
-/*# sourceMappingURL=style.css.map */
+.tile-img{
+  border-radius: 15px;
+  margin-top: 10px;
+}
 
+.article-box-top-radius{
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+/*# sourceMappingURL=style.css.map */
 
 @import "../node_modules/bulma/bulma";

@@ -19,6 +19,39 @@ $primary-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
 */
+/*NON CLASSEs*/
+hr {
+  background-color: rgba(156, 156, 156, 0.6509803922) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  scrollbar-color: #777 #555;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(119, 119, 119, 0.3333333333);
+  border-radius: 12px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: rgba(85, 85, 85, 0.1);
+}
+
+img {
+  border-radius: 5px;
+}
+
+/*CLASSEs*/
 .hide {
   display: none;
 }
@@ -55,29 +88,6 @@ $primary-invert: $pink-invert;
   box-shadow: rgba(22, 86, 234, 0.4) 0px 5px, rgba(22, 86, 234, 0.3) 0px 10px, rgba(22, 86, 234, 0.2) 0px 15px, rgba(22, 86, 234, 0.1) 0px 20px, rgba(22, 86, 234, 0.05) 0px 25px;
 }
 
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: auto;
-  scrollbar-color: #777 #555;
-}
-
-html::-webkit-scrollbar {
-  width: 10px;
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: rgba(119, 119, 119, 0.3333333333);
-  border-radius: 12px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background-color: #777;
-}
-
-html::-webkit-scrollbar-track {
-  background-color: rgba(85, 85, 85, 0.1);
-}
-
 .articles-title {
   font-weight: 800;
   font-size: xx-large;
@@ -103,6 +113,16 @@ html::-webkit-scrollbar-track {
 .hero-rounded-borders {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+}
+
+.tile-img {
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.article-box-top-radius {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
