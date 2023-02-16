@@ -25,11 +25,16 @@ $primary-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
 */
-$navbar-background-color: #ebf4ff;
-$navbar-item-hover-background-color: #e7f3ff;
+
+$navbar-background-color: #d8dfea;
+$navbar-item-hover-background-color: #ffffff42;
+$navbar-item-hover-color: hsl(207deg, 61%, 53%);
+$navbar-dropdown-arrow: hsl(217, 71%, 45%);
+$navbar-burger-color: hsl(217, 71%, 45%);
 $navbar-item-color: #3e3e3f;
 $body-background-color: #f3f8ff;
 $link: #82BAFE;
+$message-header-background-color: hsl(222, 83%, 50%);
 
 /*NON CLASSEs*/
 
