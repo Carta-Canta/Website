@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carta Canta - Articoli</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+    <div>
+        <nav id="header" class="navbar is-fixed-top" role="navigation" aria-label="navbar">
+            <div class="container is-fluid">
+                <div class="navbar-brand">
+                    <a class="navbar-item logo-hover" href="/index.html">
+                        <h1 class="title is-3">Carta-Canta</h1>
+                    </a>
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-menu" id="navMenu">
+                        <a class="navbar-item" href="../../index.html">
+                            Home
+                        </a>
+
+                        <a class="navbar-item" href="../articoli/index.html">
+                            Articoli
+                        </a>
+
+                        <a class="navbar-item">
+                            Approfondimenti
+                        </a>
+
+                        <a class="navbar-item">
+                            Sondaggi
+                        </a>
+
+                        <a class="navbar-item">
+                            <strong>Giochi</strong>
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Info
+                            </a>
+
+                            <div class="navbar-dropdown is-right is-active">
+                                <a class="navbar-item">
+                                    Chi siamo
+                                </a>
+                                <a class="navbar-item">
+                                    Perché lo facciamo
+                                </a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item">
+                                    Contatti
+                                </a>
+                            </div>
+                        </div><!--navbar-dropdown-->
+                    </div><!--navbar-menu-->
+                </div><!--navbar-end-->
+            </div>
+        </nav>
+    </div>
+
+    <div class="container is-max-desktop">
+        <div class="container is-fluid">
+            <hr>
+        </div>
+    </div>
+
+    <div class="container is-max-widescreen has-text-centered">
+        <p class="articles-title">I NOSTRI GIOCHI</p>
+    </div>
+
+    <div class="container is-max-desktop">
+        <div class="container is-fluid">
+            <hr>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------SUB NAVBAR------------------------------------------------------>
+    <br>
+
+    <div class="container">
+        <div class="container is-max-widescreen has-text-centered">
+            <button class="button" id="dropdownBtn" onclick="showGames()">Seleziona livello di difficoltà <img class="caret-down" id="caret-down" src="img/caret-down.svg"></button>
+
+        </div>
+        <br>
+        <div class="dropdown-content" id="games"></div>
+        <div id="definizioni"></div>
+        <div class="container" id="game"></div>
+    </div>
+
+
+
+    <script src="../../lib/crosswords/solutions.js"></script>
+    <script src="../../lib/crosswords/gameData.js"></script>
+    <script src="../../lib/crosswords/main.js"></script>
+    <script src="../../lib/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</body>
+</html>
