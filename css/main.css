@@ -125,6 +125,13 @@ img {
   border-top-right-radius: 0px !important;
 }
 
+.image-background {
+  background-image: url("../img/Volterra-Entrance.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=style.css.map */
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
@@ -10430,4 +10437,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: hsl(0deg, 0%, 98%);
   padding: 3rem 1.5rem 6rem;
+}
+
+body.dark {
+  background-color: hsl(0deg, 0%, 21%);
+  color: hsl(0deg, 0%, 96%);
+}
+
+body.dark button {
+  background: hsl(0deg, 0%, 96%);
+  color: hsl(0deg, 0%, 21%);
 }

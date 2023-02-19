@@ -141,6 +141,23 @@ img{
   border-top-right-radius: 0px !important;
 }
 
+.image-background {
+  background-image: url("../img/Volterra-Entrance.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 @import "../node_modules/bulma/bulma";
+
+body.dark {
+  background-color: $dark;
+  color: $light;
+}
+
+body.dark button{
+  background: $light;
+  color: $dark;
+}
