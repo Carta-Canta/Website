@@ -5,7 +5,14 @@
      * Used for automatically deploying websites via GitHub
      *
      */
+     
+    // Verify the signature of the request to ensure it's from GitHub and not someone else
+    $signature = $_SERVER['x-hub-signature-256'];
 
+    // Use HMAC SHA256 to verify the signature with the secret as a ENV variable
+    $hash = hash_hmac('sha256', file_get_contents('php://input'), getenv('GIT-SECRET'), true);
+
+    
     // array of commands
     $commands = array(
         'echo $PWD',
@@ -19,11 +26,16 @@
 
     // exec commands
     $output = '';
-    foreach($commands AS $command){
-        $tmp = shell_exec($command);
-        
-        $output .= "<span style=\"color: #6BE234;\">\$</span><span style=\"color: #729FCF;\">{$command}\n</span><br />";
-        $output .= htmlentities(trim($tmp)) . "\n<br /><br />";
+    if ($hash === $signature) {
+        $output .= "<span style=\"color: #4E9A06;\">✓</span> GitHub signature verified...<br /><br />";
+        foreach($commands AS $command){
+            $tmp = shell_exec($command);
+            
+            $output .= "<span style=\"color: #6BE234;\">\$</span><span style=\"color: #729FCF;\">{$command}\n</span><br />";
+            $output .= htmlentities(trim($tmp)) . "\n<br /><br />";
+        }
+    } else {
+        $output .= "<span style=\"color: #CC0000;\">✗</span> GitHub signature NOT verified...<br /><br />";
     }
 ?>
 
