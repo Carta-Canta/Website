@@ -10471,3 +10471,7 @@ body.dark button {
 .box-3:hover {
   background-color: hsl(0deg, 100%, 77%);
 }
+
+.spacer-articoli {
+  margin-bottom: 25px;
+}
