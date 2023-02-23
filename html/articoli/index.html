@@ -124,20 +124,18 @@
           <div class="column">
             <div class="field has-addons">
               <div class="control">
-                <form onsubmit="search(); return false">
-                  <p class="control has-icons-right">
-                    <label for="nomeArticolo"></label
-                    ><input
-                      class="input"
-                      type="text"
-                      placeholder="Cerca un articolo"
-                      id="nomeArticolo"
-                    />
-                    <span class="icon is-small is-right">
-                      <i class="fas fa-search"></i>
-                    </span>
-                  </p>
-                </form>
+                <p class="control has-icons-right">
+                  <label for="nomeArticolo"></label
+                  ><input
+                    class="input"
+                    type="text"
+                    placeholder="Cerca un articolo"
+                    id="query"
+                  />
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -190,38 +188,40 @@
     </div>
 
     <!---------------------------------------------------------ARTICOLI------------------------------------------------------>
-
-    <div class="container is-fluid">
-      <div class="container is-max-widescreen">
-        <article class="message is-medium is-link article-hover-effect">
-          <div class="message-header">
-            <a href="articolo1.html" class="article-title"
-              >Intervista all'esperto Rodolfo Marchisio</a
-            >
-            <span class="tag is-info is-light is-rounded default-cursor"
-              >10 Gennaio 2024</span
-            >
-          </div>
-          <div class="message-body">
-            <p class="title">Per comprendere meglio l'incontro con l'esperto</p>
-            <p class="subtitle">
-              Gli studenti della classe 1G hanno incontrato Rodolfo Marchisio
-              nel contesto del progetto “Dalle aule parlamentari alle aule di
-              scuola. Lezioni di Costituzione”, il cui obiettivo è di
-              approfondire la conoscenza della Costituzione italiana. Durante
-              l'incontro, gli studenti hanno posto domande riguardanti le
-              origini della Carta fondamentale italiana e hanno beneficiato
-              delle conoscenze dell'esperto in materia. Gli studenti hanno avuto
-              l'opportunità di aggiungere conoscenze e approfondire la propria
-              comprensione della Costituzione italiana.
-            </p>
-          </div>
-        </article>
+    <div id="articoli">
+      <div class="container is-fluid" id="articolo1">
+        <div class="container is-max-widescreen">
+          <article class="message is-medium is-link article-hover-effect">
+            <div class="message-header">
+              <a href="articolo1.html" class="article-title"
+                >Intervista all'esperto Rodolfo Marchisio</a
+              >
+              <span class="tag is-info is-light is-rounded default-cursor"
+                >10 Gennaio 2024</span
+              >
+            </div>
+            <div class="message-body">
+              <p class="title">Per comprendere meglio l'incontro con l'esperto</p>
+              <p class="subtitle">
+                Gli studenti della classe 1G hanno incontrato Rodolfo Marchisio
+                nel contesto del progetto “Dalle aule parlamentari alle aule di
+                scuola. Lezioni di Costituzione”, il cui obiettivo è di
+                approfondire la conoscenza della Costituzione italiana. Durante
+                l'incontro, gli studenti hanno posto domande riguardanti le
+                origini della Carta fondamentale italiana e hanno beneficiato
+                delle conoscenze dell'esperto in materia. Gli studenti hanno avuto
+                l'opportunità di aggiungere conoscenze e approfondire la propria
+                comprensione della Costituzione italiana.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
     <br />
 
     <script src="../../lib/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../../lib/SearchTool/searchEngine.js"></script>
   </body>
 </html>
