@@ -81,11 +81,12 @@ img{
 }
 
 .hover-effect {
-  transition: 0.3s;
+  transition: 0.5s;
+  border-radius: 10px !important;
 }
 
 .hover-effect:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 .article-hover-effect {
@@ -164,12 +165,24 @@ body.dark button{
   color: #fff;
 }
 
+.box-1:hover{
+  background-color: hsl(153deg, 53%, 53%, 1);
+}
+
 .box-2 {
   background-color: hsl(44deg, 100%, 77%, 0.77);
   color: rgba(0, 0, 0, 0.7);
 }
 
+.box-2:hover{
+  background-color: hsl(44deg, 100%, 77%, 1);
+}
+
 .box-3 {
   background-color: hsl(0deg, 100%, 77%, 0.77);
   color: rgba(0, 0, 0, 0.7);
+}
+
+.box-3:hover{
+  background-color: hsl(0deg, 100%, 77%, 1);
 }
