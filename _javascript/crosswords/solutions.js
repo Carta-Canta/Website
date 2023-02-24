@@ -69,7 +69,7 @@ function showSolution(type, maxX, maxY){
     }
     for(let k=0; k<maxY; k++){
         for(let j=0; j<maxX; j++){
-            id="x"+j+",y"+k;
+            let id="x"+j+",y"+k;
             //solutionArray[nomeCruciverba][indice a cui leggere][0][id]
             result = solutionArray[type][i][0][id];
             toShow= document.getElementById(`${id}`);
