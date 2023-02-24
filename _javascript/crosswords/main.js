@@ -1,16 +1,12 @@
-//Genero la dropdown
-const dropdown=document.getElementById("games");
+//Genero la lista dei bottoni
+const btnList=document.getElementById("games");
 let element="";
 for(let i=0;i<cruciverba.length; i++){
     element = "element"+i;
-    dropdown.innerHTML+=`<a id=${element} href="#">${cruciverba[i].NomeVisualizzato}</a>`;
+    btnList.innerHTML+=`<button id=${element} href="#">${cruciverba[i].NomeVisualizzato}</button>`;
 }
-//Imposto la larghezza minima del contenuto della dropdown in base alla larghezza del bottone
-let btn = document.querySelector(".dropdownBtn");
-let widthBtn = btn.clientWidth +"px";
-dropdown.style.minWidth = widthBtn;
 
-//Aggiungo gli EventListener alla dropdown
+//Aggiungo gli EventListener ai bottoni
 for(let i=0;i<cruciverba.length; i++){
     element = "element"+i;
     let x = cruciverba[i].x;
@@ -20,23 +16,6 @@ for(let i=0;i<cruciverba.length; i++){
         generate(x, y, nome.toUpperCase());
     });
 }
-
-//Funzione per mostrare il contenuto della dropdown
-function showGames(){
-    document.getElementById("games").style.display="block";
-}
-
-//faccio in modo che quando si clicca l'immagine nel bottone mostri i giochi
-document.getElementById("caret-down").addEventListener("click", () =>{
-    showGames();
-});
-
-//Nascondo i contenuti della dropdown se clicco nello schermo
-window.addEventListener("click", (event)=>{
-    if ((!event.target.matches('.dropdownBtn')) && (!event.target.matches('.caret-down'))) {
-        document.getElementById("games").style.display="none";
-    }
-})
 
 //Genero la tabella del cruciverba in base ai parametri passati alla funzione
 function generate(x,y, type){
