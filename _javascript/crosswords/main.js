@@ -81,6 +81,7 @@ function generate(x,y, type){
         }
         document.getElementById("game").innerHTML+=`<button type="submit" class="checkSolutionbtn" onclick="checkSolution('${type}','${x}','${y}')">Controlla</button>`
         document.getElementById("game").innerHTML+=`<button type="submit" class="showSolutionbtn" id="showSol" onclick="showSolution('${type}','${x}','${y}')">Mostra soluzioni</button>`
+        document.getElementById("showSol").style.display="none";
         //Mantengo premuto il bottone per far vedere l'animazione
         let btn = document.querySelector(".checkSolutionbtn");
         btn.addEventListener("click",()=>{
