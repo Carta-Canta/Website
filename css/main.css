@@ -59,12 +59,7 @@ img {
 .center {
   text-align: center;
 }
-.right{
-  text-align: right;
-}
-.highlighted{ /*evidenziatura*/
-  background: yellow;
-}
+
 #result div {
   display: none;
 }
@@ -10479,4 +10474,31 @@ body.dark button {
 
 .spacer-articoli {
   margin-bottom: 25px;
+}
+
+.right {
+  text-align: right;
+}
+
+.highlighted {
+  /*evidenziatura*/
+  background: yellow;
+}
+
+[id^=x] {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+}
+
+.space {
+  border: 2px solid #fff;
+  background: #fff;
+  color: transparent;
+  outline: none;
+}
+
+.space::selection {
+  color: transparent;
 }
