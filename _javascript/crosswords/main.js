@@ -3,7 +3,7 @@ const btnList=document.getElementById("games");
 let element="";
 for(let i=0;i<cruciverba.length; i++){
     element = "element"+i;
-    btnList.innerHTML+=`<button id=${element} href="#">${cruciverba[i].NomeVisualizzato}</button>`;
+    btnList.innerHTML+=`<button id=${element} href="#" class="button" >${cruciverba[i].NomeVisualizzato}</button>`;
 }
 
 //Aggiungo gli EventListener ai bottoni
