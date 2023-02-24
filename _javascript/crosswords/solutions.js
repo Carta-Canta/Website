@@ -29,7 +29,7 @@ function checkSolution(type, maxX, maxY){
     let toCheck = "";
     let toCheckvalue = "";
     let i = 0;
-    let result = "";
+    let result = "l";
     type=type.toUpperCase();
     for(let k=0; k<maxY; k++){
         for(let j=0; j<maxX; j++){
