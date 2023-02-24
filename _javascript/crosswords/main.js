@@ -26,8 +26,8 @@ function generate(x,y, type){
     document.getElementById("clearBoth").style.display="none";
     document.getElementById("game").replaceChildren();
     document.getElementById("definizioni").replaceChildren();
-    document.getElementById("spinner").style.display="inline-block";
-    document.getElementById("loading").style.display="block";
+    /*document.getElementById("spinner").style.display="inline-block";
+    document.getElementById("loading").style.display="block";*/
     let j=0;
     const definitionJSONarray = definizioni[0][type.toString()];
     const ruleLength = definitionJSONarray.regole.length;
