@@ -69,6 +69,10 @@ img {
   background: yellow;
 }
 
+.clear {
+  clear: both;
+}
+
 #result div {
   display: none;
 }
