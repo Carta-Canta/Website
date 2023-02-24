@@ -10484,3 +10484,48 @@ body.dark button {
 .spacer-articoli {
   margin-bottom: 25px;
 }
+
+.right {
+  text-align: right;
+}
+
+.highlighted {
+  /*evidenziatura*/
+  background: yellow;
+}
+
+[id^=x] {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+}
+
+.space {
+  border: 2px solid #fff;
+  background: #fff;
+  color: transparent;
+  outline: none;
+}
+
+.space::selection {
+  color: transparent;
+}
+
+.animated-search-bar {
+  max-width: 90%;
+  transition: 0.4s;
+  margin-left: 5%;
+  border-radius: 9999px;
+}
+
+.animated-search-bar:hover {
+  max-width: 100%;
+  margin-left: 0%;
+}
+
+.animated-search-bar:focus {
+  max-width: 100%;
+  margin-left: 0%;
+  border-radius: 0;
+}
