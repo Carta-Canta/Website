@@ -241,3 +241,14 @@ body.dark button{
   margin-left: 0%;
   border-radius: 5px;
 }
+
+.loading{ /*spinner*/
+  @include loader;
+  border-color: #82BAFE;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  display: inline-block;
+}
+#load{
+  display:none;
+}

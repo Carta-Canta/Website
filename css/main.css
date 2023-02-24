@@ -10530,3 +10530,25 @@ body.dark button {
   margin-left: 0%;
   border-radius: 5px;
 }
+
+.loading {
+  /*spinner*/
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid hsl(0deg, 0%, 86%);
+  border-radius: 9999px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  border-color: #82BAFE;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  display: inline-block;
+}
+
+#load {
+  display: none;
+}

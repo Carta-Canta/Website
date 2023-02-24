@@ -26,8 +26,7 @@ function generate(x,y, type){
     document.getElementById("clearBoth").style.display="none";
     document.getElementById("game").replaceChildren();
     document.getElementById("definizioni").replaceChildren();
-    /*document.getElementById("spinner").style.display="inline-block";
-    document.getElementById("loading").style.display="block";*/
+    document.getElementById("load").style.display="block";
     let j=0;
     const definitionJSONarray = definizioni[0][type.toString()];
     const ruleLength = definitionJSONarray.regole.length;
@@ -91,8 +90,7 @@ function generate(x,y, type){
             },1600)
         })
         document.getElementById("clearBoth").style.display="";
-        /*document.getElementById("spinner").style.display="none";
-        document.getElementById("loading").style.display="none";*/
+        document.getElementById("load").style.display="none";
         document.getElementById("game").style.display="block";
         document.getElementById("definizioni").style.display="block";
     },300)
