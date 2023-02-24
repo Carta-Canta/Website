@@ -10552,3 +10552,7 @@ body.dark button {
 #load {
   display: none;
 }
+
+#loadShow {
+  display: inline-block;
+}
