@@ -72,7 +72,7 @@ function showSolution(type, maxX, maxY){
             let id="x"+j+",y"+k;
             //solutionArray[nomeCruciverba][indice a cui leggere][0][id]
             result = solutionArray[type][i][0][id];
-            toShow= document.getElementById(`${id}`);
+            let toShow= document.getElementById(`${id}`);
             if(result!=s){
                 toShow.setAttribute("value",result);
                 toShow.style.borderColor = "#2FFF8D"; // verde chiaro
