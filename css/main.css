@@ -59,7 +59,12 @@ img {
 .center {
   text-align: center;
 }
-
+.right{
+  text-align: right;
+}
+.highlighted{ /*evidenziatura*/
+  background: yellow;
+}
 #result div {
   display: none;
 }
