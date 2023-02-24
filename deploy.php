@@ -12,7 +12,7 @@
      
      if (!$signature) {
          // The signature header is missing, so we can't verify the request
-         http_response_code(400);
+         http_response_code(418);
          die('Invalid request: signature header missing');
      }
      
