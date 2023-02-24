@@ -5,14 +5,33 @@
      * Used for automatically deploying websites via GitHub
      *
      */
+
+     $payload = file_get_contents('php://input');
+     $secret = getenv('GIT_SECRET');
+     $signature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'];
      
-    // Verify the signature of the request to ensure it's from GitHub and not someone else
-    $signature = $_SERVER['x-hub-signature-256'];
+     if (!$signature) {
+         // The signature header is missing, so we can't verify the request
+         http_response_code(418);
+         die('Invalid request: signature header missing');
+     }
+     
+     list($hashAlgorithm, $hash) = explode('=', $signature, 2);
+     
+     if ($hashAlgorithm !== 'sha256') {
+         // We only support sha256 for the hash algorithm
+         http_response_code(400);
+         die('Invalid request: unsupported hash algorithm');
+     }
+     
+     $computedHash = hash_hmac('sha256', $payload, $secret, true);
+     
+     if (!hash_equals($hash, bin2hex($computedHash))) {
+         // The computed hash doesn't match the received hash, so the request is not valid
+         http_response_code(403);
+         die('Invalid request: signature verification failed');
+     }
 
-    // Use HMAC SHA256 to verify the signature with the secret as a ENV variable
-    $hash = hash_hmac('sha256', file_get_contents('php://input'), getenv('GIT-SECRET'), true);
-
-    
     // array of commands
     $commands = array(
         'echo $PWD',
@@ -26,11 +45,10 @@
 
     // exec commands
     $output = '';
-    if ($hash === $signature) {
+    if (hash_equals($hash, bin2hex($computedHash))) {
         $output .= "<span style=\"color: #4E9A06;\">✓</span> GitHub signature verified...<br /><br />";
         foreach($commands AS $command){
-            $tmp = shell_exec($command);
-            
+            $tmp = shell_exec($command);            
             $output .= "<span style=\"color: #6BE234;\">\$</span><span style=\"color: #729FCF;\">{$command}\n</span><br />";
             $output .= htmlentities(trim($tmp)) . "\n<br /><br />";
         }
