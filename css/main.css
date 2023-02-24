@@ -10522,10 +10522,5 @@ body.dark button {
 .animated-search-bar:hover {
   max-width: 100%;
   margin-left: 0%;
-}
-
-.animated-search-bar:focus {
-  max-width: 100%;
-  margin-left: 0%;
-  border-radius: 0;
+  border-radius: 5px;
 }
