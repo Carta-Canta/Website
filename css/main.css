@@ -436,7 +436,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: #f3f8ff;
+  background-color: hsla(52deg, 66%, 65%, 0.3);
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4562,7 +4562,7 @@ button.dropdown-item.is-active {
 }
 
 .navbar {
-  background-color: #d8dfea;
+  background-color: rgb(255, 241, 149);
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -5334,7 +5334,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 
   .navbar-menu {
-    background-color: #d8dfea;
+    background-color: rgb(255, 241, 149);
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
