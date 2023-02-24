@@ -1,8 +1,8 @@
 //Dettagli cruciverba (Nome, numero caselle)
 const cruciverba=[
-    {"NomeVisualizzato":"1","Nome":"Base1","x":21,"y":19},
-    {"NomeVisualizzato":"2","Nome":"Intermedio1","x":16,"y":16},
-    {"NomeVisualizzato":"3","Nome":"Avanzato1","x":25,"y":38}
+    {"NomeVisualizzato":"Base","Nome":"Base1","x":21,"y":19},
+    {"NomeVisualizzato":"Intermedio","Nome":"Intermedio1","x":16,"y":16},
+    {"NomeVisualizzato":"Avanzato","Nome":"Avanzato1","x":25,"y":38}
 ]
 const definizioni=
 [
