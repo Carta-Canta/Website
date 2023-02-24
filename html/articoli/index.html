@@ -99,7 +99,28 @@
 
   <div class="container is-fluid">
     <div class="container is-max-widescreen">
-          <div class="field">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters">
+          <div class="tabs is-left is-hidden-mobile">
+            <ul>
+              <li class="is-active"><a>Tutti</a></li>
+              <li><a>Articoli Fondamentali</a></li>
+              <li><a>I più interessanti</a></li>
+              <li><a>Sezione 4</a></li>
+            </ul>
+          </div>
+          <div class="tabs is-centered is-hidden-desktop is-hidden-tablet">
+            <ul>
+              <li class="is-active"><a>Tutti</a></li>
+              <li><a>Articoli Fondamentali</a></li>
+              <li><a>I più interessanti</a></li>
+              <li><a>Sezione 4</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="field has-addons">
             <div class="control">
               <p class="control has-icons-right">
                 <label for="nomeArticolo"></label><input class="input" type="text" placeholder="Cerca un articolo"
@@ -110,10 +131,10 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <br>
 
   <div class="container is-fluid center is-justify-content-center">
     <div id="result" class="has-text-centred is-justify-content-center">
@@ -156,58 +177,49 @@
     </div>
   </div>
 
-    <!---------------------------------------------------------ARTICOLI------------------------------------------------------>
-    <div id="articoli">
-      <div class="container is-fluid spacer-articoli" id="articolo1">
-        <div class="container is-max-widescreen">
-          <article class="message is-medium is-link article-hover-effect">
-            <div class="message-header">
-              <a href="rodolfo_marchisio.html" class="article-title"
-                >Intervista all'esperto Rodolfo Marchisio</a
-              >
-              <span class="tag is-info is-light is-rounded default-cursor"
-                >23 gennaio 2023</span
-              >
-            </div>
-            <div class="message-body">
-              <p class="title">Per comprendere meglio l'incontro con l'esperto</p>
-              <p class="subtitle">
-                Gli studenti della classe 1G hanno incontrato Rodolfo Marchisio
-                nel contesto del progetto “Dalle aule parlamentari alle aule di
-                scuola. Lezioni di Costituzione”, il cui obiettivo è di
-                approfondire la conoscenza della Costituzione italiana. Durante
-                l'incontro, gli studenti hanno posto domande riguardanti le
-                origini della Carta fondamentale italiana e hanno beneficiato
-                delle conoscenze dell'esperto in materia. Gli studenti hanno avuto
-                l'opportunità di aggiungere conoscenze e approfondire la propria
-                comprensione della Costituzione italiana.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="container is-fluid spacer-articoli" id="articolo2">
-        <div class="container is-max-widescreen">
-          <article class="message is-medium is-link article-hover-effect">
-            <div class="message-header">
-              <a href="stefano_penge.html" class="article-title"
-                >Incontro con l'esperto Stefano Penge</a
-              >
-              <span class="tag is-info is-light is-rounded default-cursor"
-                >27 gennaio 2023</span
-              >
-            </div>
-            <div class="message-body">
-              <p class="title">Costituzione: una lettura diversa. Incontro con l'esperto</p>
-              <p class="subtitle">
-                TODO art2
-              </p>
-            </div>
-          </article>
-        </div>
+  <!---------------------------------------------------------ARTICOLI------------------------------------------------------>
+  <div id="articoli">
+    <div class="container is-fluid spacer-articoli" id="rodolfo_marchisio">
+      <div class="container is-max-widescreen">
+        <article class="message is-medium is-link article-hover-effect">
+          <div class="message-header">
+            <a href="rodolfo_marchisio.html" class="article-title">Intervista all'esperto Rodolfo Marchisio</a>
+            <span class="tag is-info is-light is-rounded default-cursor">23 gennaio 2023</span>
+          </div>
+          <div class="message-body">
+            <p class="title">Per comprendere meglio l'incontro con l'esperto</p>
+            <p class="subtitle">
+              Gli studenti della classe 1G hanno incontrato Rodolfo Marchisio
+              nel contesto del progetto “Dalle aule parlamentari alle aule di
+              scuola. Lezioni di Costituzione”, il cui obiettivo è di
+              approfondire la conoscenza della Costituzione italiana. Durante
+              l'incontro, gli studenti hanno posto domande riguardanti le
+              origini della Carta fondamentale italiana e hanno beneficiato
+              delle conoscenze dell'esperto in materia. Gli studenti hanno avuto
+              l'opportunità di aggiungere conoscenze e approfondire la propria
+              comprensione della Costituzione italiana.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
-    <div class="container is-fluid spacer-articoli" id="articolo3">
+    <div class="container is-fluid spacer-articoli" id="stefano_penge">
+      <div class="container is-max-widescreen">
+        <article class="message is-medium is-link article-hover-effect">
+          <div class="message-header">
+            <a href="stefano_penge.html" class="article-title">Incontro con l'esperto Stefano Penge</a>
+            <span class="tag is-info is-light is-rounded default-cursor">27 gennaio 2023</span>
+          </div>
+          <div class="message-body">
+            <p class="title">Costituzione: una lettura diversa. Incontro con l'esperto</p>
+            <p class="subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eius molestias maxime doloribus, quaerat quasi nostrum itaque nemo nisi vel ipsa, ab quod praesentium, veniam ratione dolorem amet esse aliquid!
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="container is-fluid" id="articolo3">
       <div class="container is-max-widescreen">
         <article class="message is-medium is-link article-hover-effect">
           <div class="message-header">
@@ -225,7 +237,7 @@
         </article>
       </div>
     </div>
-    <div class="container is-fluid spacer-articoli" id="articolo4">
+    <div class="container is-fluid" id="articolo4">
       <div class="container is-max-widescreen">
         <article class="message is-medium is-link article-hover-effect">
           <div class="message-header">
@@ -243,7 +255,7 @@
         </article>
       </div>
     </div>
-    <div class="container is-fluid spacer-articoli" id="assemblea_costituente">
+    <div class="container is-fluid" id="assemblea_costituente">
       <div class="container is-max-widescreen">
         <article class="message is-medium is-link article-hover-effect">
           <div class="message-header">
@@ -261,7 +273,7 @@
         </article>
       </div>
     </div>
-    <div class="container is-fluid spacer-articoli" id="statuto_albertino_vs_costituzione">
+    <div class="container is-fluid" id="statuto_albertino_vs_costituzione">
       <div class="container is-max-widescreen">
         <article class="message is-medium is-link article-hover-effect">
           <div class="message-header">
@@ -281,11 +293,12 @@
       </div>
     </div>
   </div>
-  <br />
+  <br/>
 
   <script src="../../lib/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="../../lib/SearchTool/searchEngine.js"></script>
+  <script src="../../lib/SearchTool/descArt.js"></script>
 </body>
 
 </html>
