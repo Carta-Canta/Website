@@ -7,12 +7,12 @@
      */
 
     // Verify the signature of the request to ensure it's from GitHub and not someone else
-    $signature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'];
+    $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 
-    $algo = sha256;
+    $algo = sha1;
 
     // Use HMAC SHA256 to verify the signature with the secret as a ENV variable
-    $hash = hash_hmac('sha256', file_get_contents('php://input'), getenv('GIT-SECRET'), true);
+    $hash = hash_hmac($algo, file_get_contents('php://input'), getenv('GIT-SECRET'), true);
 
     // array of commands
     $commands = array(
