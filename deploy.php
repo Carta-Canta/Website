@@ -6,13 +6,35 @@
      *
      */
      
+    /**
+    * Request URL: https://cartacanta.whixonio.net/deploy.php
+    * Request method: POST
+    * Accept:
+*content-type: application/x-www-form-urlencoded
+*User-Agent: GitHub-Hookshot/3e3b786
+*X-GitHub-Delivery: 26513fd2-b455-11ed-8ce5-426781ecab80
+*X-GitHub-Event: push
+*X-GitHub-Hook-ID: 402367875
+*X-GitHub-Hook-Installation-Target-ID: 580043958
+*X-GitHub-Hook-Installation-Target-Type: repository
+*X-Hub-Signature: sha1=da73b3c7e5662e23b29b25d25858f0519a926235
+*X-Hub-Signature-256: sha256=a7358a889ea657584bdc6afdded234ef3fb19f87f4e7ac0d7acac65dcf54c6c0
+     * 
+     */
+
+
+
     // Verify the signature of the request to ensure it's from GitHub and not someone else
     $signature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'];
+
+    $algo = sha256;
 
     // Use HMAC SHA256 to verify the signature with the secret as a ENV variable
     $hash = hash_hmac('sha256', file_get_contents('php://input'), getenv('GIT-SECRET'), true);
 
-    
+    // Split signature into algorithm and hash
+    list($algo, $hash) = explode('=', $signature, 2);
+
     // array of commands
     $commands = array(
         'echo $PWD',
