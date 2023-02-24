@@ -19,6 +19,8 @@ $primary-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
 */
+/*FONTs*/
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
 /*NON CLASSEs*/
 hr {
   background-color: rgba(156, 156, 156, 0.6509803922) !important;
@@ -4566,7 +4568,7 @@ button.dropdown-item.is-active {
 }
 
 .navbar {
-  background-color: #f5f1d2;
+  background-color: #f0e9b6;
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -5338,7 +5340,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 
   .navbar-menu {
-    background-color: #f5f1d2;
+    background-color: #f0e9b6;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
