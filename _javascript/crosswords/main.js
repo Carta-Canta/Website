@@ -74,6 +74,7 @@ function generate(x,y, type){
         for(let i=0; i<aiutiLength; i++){
             let coordinata = aiuti[0][type.toString()][i];
             let splitted = coordinata.split(",");
+            document.getElementById(coordinata).disabled=true;
             let valX = splitted[0].replace("x","");
             let valY = splitted[1].replace("y","");
             document.getElementById(coordinata).setAttribute("value",sol[valY][valX]); // siccome è memorizzato per riga devo fare [y][x]
