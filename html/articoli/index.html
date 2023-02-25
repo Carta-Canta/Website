@@ -13,8 +13,14 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<body>
+<!--Aggiorno la pagina quando si torna indetro dallq pagina dell'articolo per non far comparire il testo della ricerca-->
+<body onload=
+"
+if(performance.navigation.type == 2){
+   location.reload(true);
+}
+"
+>
   <div>
     <nav id="header" class="navbar is-fixed-top" role="navigation" aria-label="navbar">
       <div class="container is-fluid">
@@ -102,7 +108,7 @@
           <div class="field animated-search-bar">
             <div class="control">
               <p class="control has-icons-right">
-                <label for="nomeArticolo"></label><input id="query" class="input is-rounded" type="text" placeholder="Cerca un articolo"/>
+                <label for="nomeArticolo"></label><input id="query" class="input is-rounded" type="text" value="" placeholder="Cerca un articolo"/>
                 <span class="icon is-small is-right">
                   <i class="fas fa-search"></i>
                 </span>
