@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+  var pageName = location.href.split("/").slice(-1); 
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
@@ -46,12 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
   button.style.zIndex = "9998";
   document.body.appendChild(button);
   let created = false;
+  var title = document.createElement("h1");
   // Add a click event on the button
   button.addEventListener("click", function() {
     if (div.style.display == "none") {
       div.style.display = "block";
       if(!created){
-        iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023";
+        if(pageName=="stefano_penge.html"){
+          iframe.src="https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
+          title.innerHTML="Elabora testo Costituzione"
+          
+        }else{
+          iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023";
+        }
+        
       }
       created=true;
       
@@ -75,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Create a title for the div
-  var title = document.createElement("h1");
   title.innerHTML = "Chiedi al presidente della Repubblica";
   title.className = "title is-4";
   title.style.textAlign = "center";
