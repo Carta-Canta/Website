@@ -45,12 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
   button.style.right = "0";
   button.style.zIndex = "9998";
   document.body.appendChild(button);
-
+  let created = false;
   // Add a click event on the button
   button.addEventListener("click", function() {
     if (div.style.display == "none") {
       div.style.display = "block";
-      iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023";
+      if(!created){
+        iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023";
+      }
+      created=true;
+      
       
     } else {
       div.style.display = "none";
