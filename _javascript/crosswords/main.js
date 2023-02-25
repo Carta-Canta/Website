@@ -17,6 +17,10 @@ for(let i=0;i<cruciverba.length; i++){
     });
 }
 
+// document.getElementById("mobile-container").addEventListener("mouseover",()=>{
+//     $("#mobile-container").addClass("mobile-container");
+// })
+
 //Genero la tabella del cruciverba in base ai parametri passati alla funzione
 function generate(x,y, type){
     //distruggo l'array delle soluzioni
