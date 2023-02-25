@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(div);
 
   var button = document.createElement("Button");
-  button.innerHTML = "Logo Volterra";
+  button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i>';
   button.className = "button is-primary is-rounded mr-5 mb-5";
   button.style.position = "fixed";
   button.style.bottom = "0";
