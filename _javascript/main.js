@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var button = document.createElement("Button");
   button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i>';
-  button.className = "button is-primary is-rounded mr-5 mb-5";
+  button.className = "button is-primary is-rounded mr-5 mb-5 is-hidden-mobile";
   button.style.position = "fixed";
   button.style.bottom = "0";
   button.style.right = "0";
