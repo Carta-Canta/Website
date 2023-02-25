@@ -1,5 +1,5 @@
 <?php
-    sleep(0.8); // attende 800 ms per non sovraccaricare il server
+    sleep(1); // attende 1 secondo per non sovraccaricare il server
     $path="../../html/articoli"; // percorso degli articoli
     $results=[]; // array risultati che conterrà i percorsi dei file
     $k=0;
