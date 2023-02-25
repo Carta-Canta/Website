@@ -32,12 +32,12 @@ $navbar-item-hover-color: hsl(207deg, 61%, 53%);
 $navbar-dropdown-arrow: hsl(217, 71%, 45%);
 $navbar-burger-color: hsl(217, 71%, 45%);
 $navbar-item-color: #3e3e3f;
-$body-background-color: hsla(52, 66%, 65%, 0.3);
+$body-background-color: #ffd66f86;
 $link: #82bafe;
 $message-header-color: #023047;
 $message-header-background-color: #8ecae6;
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) { //crea margine laterale ai container con questa proprioeta' con risoluzione inferiore a 1024px
   .mobile-container{ 
     max-width: calc(100% - 30px);
     margin-left: 15px;
@@ -50,6 +50,11 @@ $message-header-background-color: #8ecae6;
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
 
 /*NON CLASSEs*/
+
+.navbar{
+  -webkit-box-shadow: 0px 10px 20px -4px #000000; 
+  box-shadow: 0px 10px 20px -4px #000000;
+}
 
 hr {
   background-color: #9c9c9ca6 !important;
@@ -135,6 +140,15 @@ img {
 .articles-title {
   font-weight: 800;
   font-size: xx-large;
+  color: #8ecae6;
+}
+
+.articles-title:hover{
+  color: #023047;
+}
+
+.continue-reading{
+  color: #023047;
 }
 
 .goto-articles {
