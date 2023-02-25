@@ -4436,9 +4436,9 @@ button.dropdown-item.is-active {
 
 .message-header {
   align-items: center;
-  background-color: hsl(222deg, 83%, 50%);
+  background-color: #8ECAE6;
   border-radius: 4px 4px 0 0;
-  color: #fff;
+  color: #023047;
   display: flex;
   font-weight: 700;
   justify-content: space-between;
@@ -4568,7 +4568,7 @@ button.dropdown-item.is-active {
 }
 
 .navbar {
-  background-color: #f0e9b6;
+  background-color: #ffd66f;
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -5340,7 +5340,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 
   .navbar-menu {
-    background-color: #f0e9b6;
+    background-color: #ffd66f;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
