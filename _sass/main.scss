@@ -165,7 +165,7 @@ img {
 }
 
 .image-background {
-  background-image: url("../img/costituzione1.jpg");
+  background-image: url("../img/costituzione2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -280,47 +280,6 @@ body.dark button {
 
 .full-image {
   width: 100%;
-  height: 1500px;
+  height: auto;
   filter: brightness(0.5);
-}
-
-#cf3 {
-  position: relative;
-  height: 381px;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-#cf3 img {
-  height: 381px;
-  position: absolute;
-  left: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-
-@keyframes cf3FadeInOut {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-#cf3 img.top {
-  animation-name: cf3FadeInOut;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 15s;
-  animation-direction: alternate;
 }
