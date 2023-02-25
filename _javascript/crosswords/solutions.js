@@ -2,7 +2,7 @@ let giusto = true;
 let result = "";
 let solutionArray="";
 //Carico l'array delle soluzioni
-function buildArray(type, maxX, maxY){
+async function buildArray(type, maxX, maxY){
     type=type.toUpperCase();
     solutionArray = {[type]:[{}]};
     let id="";
@@ -20,12 +20,8 @@ function buildArray(type, maxX, maxY){
         }
     }
 }
-
-//Controllo le soluzioni inserite
-function checkSolution(type, maxX, maxY){
-    if(solutionArray.length==0){
-        buildArray(type,maxX,maxY);
-    }
+async function isCorrect(type, maxX, maxY){
+    giusto=true;
     let id = "";
     let toCheck = "";
     let toCheckvalue = "";
@@ -51,6 +47,13 @@ function checkSolution(type, maxX, maxY){
             i++;
         }
     }
+}
+//Controllo le soluzioni inserite
+async function checkSolution(type, maxX, maxY){
+    if(solutionArray.length==0){
+        await buildArray(type,maxX,maxY);
+    }
+    await isCorrect(type, maxX, maxY);
     if(giusto){
         setTimeout(()=>{
             alert("Il cruciverba è giusto");
