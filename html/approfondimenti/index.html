@@ -107,7 +107,7 @@
     <br />
     <!---------------------------------------------------------ARTICOLI------------------------------------------------------>
 
-    <div class="container is-fluid">
+    <div class="container mobile-container">
       <div class="container is-max-widescreen">
         <div class="content is-medium box">
           <h1>La Costituzione e l'ambiente</h1>
@@ -126,9 +126,14 @@
             prodotto
           </h4>
 
-          <button class="button is-medium is-fullwidth is-link is-light is-fluid" type="submit" onclick="window.open('../../img/pdf/COMPLETO_Attività _didattica_snap.pdf')">Leggere la Costituzione con&nbsp;<a href="https://snap.berkeley.edu" target="_blank">Snap!</a></button>
+          <button class="button is-medium is-fullwidth is-link is-light is-fluid" type="submit" onclick="window.open('../../img/pdf/COMPLETO_Attività _didattica_snap.pdf')">Leggere la Costituzione con Snap!</button>
           <br>
-          <button class="button is-medium is-fullwidth is-link is-light" type="submit" onclick="window.open('../../img/pdf/COMPLETO_Gioco_ruolo_ambiente.pdf')">La “Costituzione dell’ambiente”, un gioco di ruolo</button>
+          <div class="is-hidden-mobile">
+            <button class="button is-medium is-fullwidth is-link is-light" type="submit" onclick="window.open('../../img/pdf/COMPLETO_Gioco_ruolo_ambiente.pdf')">La “Costituzione dell’ambiente”, un gioco di ruolo</button>
+          </div>
+          <div class="is-hidden-tablet">
+            <button class="button is-medium is-fullwidth is-link is-light" type="submit" onclick="window.open('../../img/pdf/COMPLETO_Gioco_ruolo_ambiente.pdf')">La “Costituzione dell’ambiente”,<br>un gioco di ruolo</button>
+          </div>
           <br>
           <button class="button is-medium is-fullwidth is-link is-light" type="submit" onclick="window.open('../../img/pptx/Presentazione_ambiente.pptx')">Presentazione ambiente</button>
         </div>
