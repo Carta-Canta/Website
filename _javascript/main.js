@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //   $("#hover-rounded-field").addClass("is-rounded");
   // })
 
-
+  var iframe = document.createElement("iframe");
   // Create a floating div containing the iframe
   var div = document.createElement("div");
   div.style.position = "fixed";
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
   button.addEventListener("click", function() {
     if (div.style.display == "none") {
       div.style.display = "block";
+      iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023";
+      
     } else {
       div.style.display = "none";
     }
@@ -76,16 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
   div.appendChild(title);
 
   // create an iframe inside the div basing of this code <iframe width="480" height="390" frameBorder=0 allowfullscreen allow="geolocation; microphone;camera" src="https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023"></iframe>
-  div.innerHTML+=
-  `
-  <iframe width="480" height="390" frameBorder=0 allowfullscreen allow="geolocation; microphone;camera" src="https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_%20per_keyword&username=costituzione2023"></iframe>
-  `;
-
-
+  iframe.width = "480";
+  iframe.height = "390";
+  iframe.allowfullscreen = "true";
+  iframe.allow = "geolocation; microphone;camera";
+  div.appendChild(iframe);
   // When the user clicks anywhere outside of the div, close it
   window.onclick = function(event) {
-    if (event.target == div) {
+    if (event.target != div && event.target!=button) {
       div.style.display = "none";
     }
   }
+
 });
