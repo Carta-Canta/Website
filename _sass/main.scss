@@ -36,6 +36,7 @@ $body-background-color: #ffd66f86;
 $link: #82bafe;
 $message-header-color: #023047;
 $message-header-background-color: #8ecae6;
+//$table-background-color: ???; //inserire qui colore sfondo della tabella della pagina giochi, da matchare con quelo dello sfondo che non riesco a trovare :P
 
 @media screen and (max-width: 1024px) { //crea margine laterale ai container con questa proprioeta' con risoluzione inferiore a 1024px
   .mobile-container{ 
