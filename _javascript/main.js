@@ -50,28 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
   var title = document.createElement("h1");
   // Add a click event on the button
   button.addEventListener("click", function() {
-    if (div.style.display == "none") {
-      div.style.display = "block";
-      let interval = setInterval(()=>{
-        if($("#snap").css("display")=="block"){
-          if(!created){
-            if(pageName=="stefano_penge.html"){
-              iframe.src="https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
-              title.innerHTML="Elabora testo Costituzione"
-              
-            }else{
-              iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
-            }
+    //if (div.style.display == "none") {
+    div.style.display = "block";
+    let interval = setInterval(()=>{
+      if($("#snap").css("display")=="block"){
+        if(!created){
+          if(pageName=="stefano_penge.html"){
+            iframe.src="https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
+            title.innerHTML="Elabora testo Costituzione"
             
+          }else{
+            iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
           }
-          created=true;
-          clearInterval(interval);
+          
         }
-      },10);
+        created=true;
+        clearInterval(interval);
+      }
+    },10);
       
-    } else {
+    /*} else {
       div.style.display = "none";
-    }
+    }*/
   });
 
   // Hide the button when the user opens the div
