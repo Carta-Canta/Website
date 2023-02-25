@@ -37,6 +37,14 @@ $link: #82bafe;
 $message-header-color: #023047;
 $message-header-background-color: #8ecae6;
 
+@media screen and (max-width: 1024px) {
+  .mobile-container{ 
+    max-width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
 /*FONTs*/
 
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");

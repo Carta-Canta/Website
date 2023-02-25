@@ -19,8 +19,15 @@ $primary-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
 */
-/*FONTs*/
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@media screen and (max-width: 1024px) {
+  .mobile-container {
+    max-width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/*FONTs*/
 /*NON CLASSEs*/
 hr {
   background-color: rgba(156, 156, 156, 0.6509803922) !important;
