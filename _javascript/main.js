@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let opened = false;
   var pageName = location.href.split("/").slice(-1); 
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
         }
         created=true;
+        opened=true;
         clearInterval(interval);
       }
     },10);
@@ -101,8 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
   div.appendChild(iframe);
   // When the user clicks anywhere outside of the div, close it
   window.onclick = function(event) {
-    if (event.target != div && event.target!=button) {
+    if (event.target!=button && event.target != div && opened) {
       div.style.display = "none";
+      opened=false;
     }
   }
 
