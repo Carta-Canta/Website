@@ -2368,7 +2368,7 @@ div.icon-text {
   }
 }
 .table {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: #FFE9B3;
   color: hsl(0deg, 0%, 21%);
 }
 .table td,
