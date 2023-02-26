@@ -95,7 +95,7 @@ function generate(x,y, type){
         document.getElementById("load").style.display="none";
         document.getElementById("game").style.display="block";
         document.getElementById("definizioni").style.display="block";
-        window.location.href='#rule';
+        window.location.href='#play';
     },300)
     
     

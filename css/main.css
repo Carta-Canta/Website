@@ -10585,6 +10585,10 @@ body.dark button {
   display: inline-block;
 }
 
+#play {
+  margin-top: 60px;
+}
+
 .full-image {
   width: 100%;
   height: auto;
