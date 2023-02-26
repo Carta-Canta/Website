@@ -1,36 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   let opened = false;
-  var pageName = location.href.split("/").slice(-1); 
+  var pageName = location.href.split("/").slice(-1);
+  // document.getElementById("hover-rounded-field").addEventListener("mouseover",()=>{
+  //   $("#hover-rounded-field").removeClass("is-rounded");
+  // })
+
+  // document.getElementById("hover-rounded-field").addEventListener("mouseleave",()=>{
+  //   $("#hover-rounded-field").addClass("is-rounded");
+  // })
+
   // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  const $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll(".navbar-burger"),
+    0
+  );
 
   // Add a click event on each of them
-  $navbarBurgers.forEach( el => {
-    el.addEventListener('click', () => {
-
+  $navbarBurgers.forEach((el) => {
+    el.addEventListener("click", () => {
       // Get the target from the "data-target" attribute
       const target = el.dataset.target;
       const $target = document.getElementById(target);
 
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-
+      el.classList.toggle("is-active");
+      $target.classList.toggle("is-active");
     });
   });
-
-  // document.getElementById("hover-rounded-field").addEventListener("mouseover",()=>{
-  //   $("#hover-rounded-field").removeClass("is-rounded");
-  // })
-  
-  // document.getElementById("hover-rounded-field").addEventListener("mouseleave",()=>{
-  //   $("#hover-rounded-field").addClass("is-rounded");
-  // })
 
   var iframe = document.createElement("iframe");
   // Create a floating div containing the iframe
   var div = document.createElement("div");
-  div.id="snap";
+  div.id = "snap";
   div.style.position = "fixed";
   div.style.bottom = "0";
   div.style.right = "0";
@@ -41,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var button = document.createElement("Button");
   button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i>';
+  if (pageName == "stefano_penge.html") {
+    button.innerHTML =
+      '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Elabora testo Costituzione';
+  } else {
+    button.innerHTML =
+      '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Chiedi al presidente della Repubblica';
+  }
   button.className = "button is-primary is-rounded mr-5 mb-5 is-hidden-mobile";
   button.style.position = "fixed";
   button.style.bottom = "0";
@@ -50,27 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
   let created = false;
   var title = document.createElement("h1");
   // Add a click event on the button
-  button.addEventListener("click", function() {
+  button.addEventListener("click", function () {
     //if (div.style.display == "none") {
     div.style.display = "block";
-    let interval = setInterval(()=>{
-      if($("#snap").css("display")=="block"){
-        if(!created){
-          if(pageName=="stefano_penge.html"){
-            iframe.src="https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
-            title.innerHTML="Elabora testo Costituzione"
-            
-          }else{
-            iframe.src = "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
+    let interval = setInterval(() => {
+      if ($("#snap").css("display") == "block") {
+        if (!created) {
+          if (pageName == "stefano_penge.html") {
+            iframe.src =
+              "https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
+            title.innerHTML = "Elabora testo Costituzione";
+          } else {
+            iframe.src =
+              "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
           }
-          
         }
-        created=true;
-        opened=true;
+        created = true;
+        opened = true;
         clearInterval(interval);
       }
-    },10);
-      
+    }, 10);
+
     /*} else {
       div.style.display = "none";
     }*/
@@ -85,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   div.appendChild(close);
 
   // Add a click event on the closing button
-  close.addEventListener("click", function() {
+  close.addEventListener("click", function () {
     div.style.display = "none";
   });
 
@@ -102,11 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
   iframe.allow = "geolocation; microphone;camera";
   div.appendChild(iframe);
   // When the user clicks anywhere outside of the div, close it
-  window.onclick = function(event) {
-    if (event.target!=button && event.target != div && opened) {
+  window.onclick = function (event) {
+    if (event.target != button && event.target != div && opened) {
       div.style.display = "none";
-      opened=false;
+      opened = false;
     }
-  }
-
+  };
 });
