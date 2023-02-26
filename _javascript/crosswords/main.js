@@ -27,6 +27,7 @@ function generate(x,y, type){
     document.getElementById("game").replaceChildren();
     document.getElementById("definizioni").replaceChildren();
     document.getElementById("load").style.display="block";
+    window.location.href="#load"
     let j=0;
     const definitionJSONarray = definizioni[0][type.toString()];
     const ruleLength = definitionJSONarray.regole.length;
@@ -94,6 +95,7 @@ function generate(x,y, type){
         document.getElementById("load").style.display="none";
         document.getElementById("game").style.display="block";
         document.getElementById("definizioni").style.display="block";
+        window.location.href='#game';
     },300)
     
     
