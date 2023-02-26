@@ -41,14 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(div);
 
   var button = document.createElement("Button");
-  button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i>';
-  if (pageName == "stefano_penge.html") {
-    button.innerHTML =
-      '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Elabora testo Costituzione';
-  } else {
-    button.innerHTML =
-      '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Chiedi al Presidente della Repubblica';
-  }
+  button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Chiedi al Presidente della Repubblica';
   button.className = "button is-primary is-rounded mr-5 mb-5 is-hidden-mobile";
   button.style.position = "fixed";
   button.style.bottom = "0";
