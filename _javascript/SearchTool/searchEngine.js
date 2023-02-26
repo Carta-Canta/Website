@@ -42,44 +42,49 @@ function beginSearch(){
         document.getElementById("results").innerHTML=`<h4 class="title is-4" id="loadShow">Ricerca in corso...<span class="loading" id="spinner"></span></h4><br>`
         document.getElementById("loadShow").style.display="";
         setTimeout(()=>{ // attendo 10 ms per fare in modo che venga mostrato lo spinner
-            results=[];
-            resultsLength = 0;
-            let pages="";
-            $.ajax({
-                url: "../../lib/SearchTool/getFiles.php",
-                type: "GET",
-                async: false,
-                success: function(data){
-                    pages = JSON.parse(data);
-                }
-            });
-            for(let i=0; i<pages.length; i++){
-                pages[i] = pages[i].replace("../","");
-                pages[i] = pages[i].replace("/html","");
-            }
-            pages.forEach(file => {
+            try{
+                results=[];
+                resultsLength = 0;
+                let pages="";
                 $.ajax({
-                    url: file,
+                    url: "../../lib/SearchTool/getFiles.php",
                     type: "GET",
                     async: false,
                     success: function(data){
-                        let name = file.replace("../articoli/","");
-                        name = name.replace(".html","");
-                        search(data, query, name);
+                        pages = JSON.parse(data);
                     }
-                })
-            });
-            for(let i=0; i<resultsLength; i++){
-                let id = results[i];
-                $("#" + id).css("display","");
-                $("#" + id + " *").css("display","");
+                });
+                for(let i=0; i<pages.length; i++){
+                    pages[i] = pages[i].replace("../","");
+                    pages[i] = pages[i].replace("/html","");
+                }
+                pages.forEach(file => {
+                    $.ajax({
+                        url: file,
+                        type: "GET",
+                        async: false,
+                        success: function(data){
+                            let name = file.replace("../articoli/","");
+                            name = name.replace(".html","");
+                            search(data, query, name);
+                        }
+                    })
+                });
+                for(let i=0; i<resultsLength; i++){
+                    let id = results[i];
+                    $("#" + id).css("display","");
+                    $("#" + id + " *").css("display","");
+                }
+                if(resultsLength!=0){
+                    document.getElementById("results").innerHTML=`<h4 class="title is-4">Risultati ricerca:</h4><br>`;
+                }else{
+                    document.getElementById("results").innerHTML=`<h4 class="title is-4">La ricerca non ha prodotto risultati</h4><br>`;
+                }
+                $("#articoli").css("display","");
+            }catch(err){
+                document.getElementById("results").innerHTML=`<h4 class="title is-4">Si è verificato un errore durante la ricerca</h4><br>`;
+                console.log(err);
             }
-            if(resultsLength!=0){
-                document.getElementById("results").innerHTML=`<h4 class="title is-4">Risultati ricerca:</h4><br>`;
-            }else{
-                document.getElementById("results").innerHTML=`<h4 class="title is-4">La ricerca non ha prodotto risultati</h4><br>`;
-            }
-            $("#articoli").css("display","");
         },10); 
     }else{
         window.location.reload();
