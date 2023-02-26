@@ -10600,3 +10600,7 @@ body.dark button {
   font-size: xx-large;
   color: #8ecae6;
 }
+
+.back-icon-spacer {
+  margin-right: 10px;
+}
