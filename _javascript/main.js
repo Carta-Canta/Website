@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(div);
 
   var button = document.createElement("Button");
-  button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Chiedi al Presidente della Repubblica';
+  button.innerHTML = '<div class="is-hidden-mobile"><i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Chiedi al Presidente della Repubblica</div>'
   button.className = "button is-primary is-rounded mr-5 mb-5 is-hidden-mobile";
   button.style.position = "fixed";
   button.style.bottom = "0";
