@@ -297,6 +297,9 @@ body.dark button {
 #play{
   margin-top:60px;
 }
+.line_list{ /*list with -*/
+  list-style-type: "-" !important;
+}
 .full-image {
   width: 100%;
   height: auto;
