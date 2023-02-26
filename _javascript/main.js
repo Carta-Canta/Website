@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   let opened = false;
-  var pagePath = window.location.pathname;
   // document.getElementById("hover-rounded-field").addEventListener("mouseover",()=>{
   //   $("#hover-rounded-field").removeClass("is-rounded");
   // })
