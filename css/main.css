@@ -10598,7 +10598,7 @@ body.dark button {
 .articles-title-no-hover {
   font-weight: 800;
   font-size: xx-large;
-  color: #8ecae6;
+  color: #023047;
 }
 
 .back-icon-spacer {
@@ -10616,4 +10616,8 @@ body.dark button {
 
 .tag-data-articoli {
   color: #023047;
+}
+
+.yellow-bg-link {
+  color: #BF0000;
 }
