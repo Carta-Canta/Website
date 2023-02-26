@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if ($("#snap").css("display") == "block") {
         if (!created) {
           iframe.src ="https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
+          iframe.id="frame";
           title.innerHTML = "Chiedi al Presidente della Repubblica";
         }
         created = true;
