@@ -10610,6 +10610,10 @@ body.dark button {
   color: white;
 }
 
+.presidente-button:hover {
+  color: rgb(215, 215, 215);
+}
+
 .tag-data-articoli {
   color: #023047;
 }
