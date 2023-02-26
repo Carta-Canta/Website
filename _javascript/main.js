@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   let opened = false;
-  var pageName = location.href.split("/").slice(-1);
+  var pagePath = window.location.pathname;
   // document.getElementById("hover-rounded-field").addEventListener("mouseover",()=>{
   //   $("#hover-rounded-field").removeClass("is-rounded");
   // })
@@ -57,10 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let interval = setInterval(() => {
       if ($("#snap").css("display") == "block") {
         if (!created) {
-          if (pageName == "stefano_penge.html") {
+          if (pagePath == "html/approfondimenti/index.html") {
             iframe.src =
               "https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
             title.innerHTML = "Elabora testo Costituzione";
+            //button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Elabora testo Costituzione';
           } else {
             iframe.src =
               "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
