@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             iframe.src =
               "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
+              title.innerHTML = "Chiedi al Presidente della Repubblica";
           }
         }
         created = true;
@@ -98,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Create a title for the div
-  title.innerHTML = "Chiedi al presidente della Repubblica";
   title.className = "title is-4";
   title.style.textAlign = "center";
   div.appendChild(title);
