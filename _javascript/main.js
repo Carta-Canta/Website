@@ -57,16 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let interval = setInterval(() => {
       if ($("#snap").css("display") == "block") {
         if (!created) {
-          if (pagePath == "html/approfondimenti/index.html") {
-            iframe.src =
-              "https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
-            title.innerHTML = "Elabora testo Costituzione";
-            //button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Elabora testo Costituzione';
-          } else {
-            iframe.src =
-              "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
-              title.innerHTML = "Chiedi al Presidente della Repubblica";
-          }
+          iframe.src ="https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
+          title.innerHTML = "Chiedi al Presidente della Repubblica";
         }
         created = true;
         opened = true;
