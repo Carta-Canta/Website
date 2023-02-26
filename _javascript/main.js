@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             iframe.src =
               "https://snap.berkeley.edu/embed?projectname=PER_SITO_elabora_testo_costituzione&username=costituzione2023";
             title.innerHTML = "Elabora testo Costituzione";
-            button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Elabora testo Costituzione';
+            //button.innerHTML = '<i class="fa-sharp fa-solid fa-angle-up"></i> &nbsp; Elabora testo Costituzione';
           } else {
             iframe.src =
               "https://snap.berkeley.edu/embed?projectname=PER_SITO_Lettura_articoli_completo&username=costituzione2023";
