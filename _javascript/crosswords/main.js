@@ -97,9 +97,14 @@ function generate(x,y, type){
             let valY = splitted[1].replace("y","");
             document.getElementById(coordinata).setAttribute("value",sol[valY][valX]); // siccome è memorizzato per riga devo fare [y][x]
         }
-        document.getElementById("game").innerHTML+=`<br><button type="submit" class="button checkSolutionbtn" onclick="checkSolution('${type}','${x}','${y}')">Controlla</button>`
-        document.getElementById("game").innerHTML+=`<button type="submit" class="button resetBtn" style="margin-left: 15px;" onclick="reset('${x}','${y}')">Reset</button>`
-        document.getElementById("game").innerHTML+=`<button type="submit" class="button showSolutionbtn" style="margin-left: 15px;" id="showSol" onclick="showSolution('${type}','${x}','${y}')">Mostra soluzioni</button>`
+        document.getElementById("game").innerHTML+=`<br><button type="submit" class="button checkSolutionbtn is-hidden-mobile" onclick="checkSolution('${type}','${x}','${y}')">Controlla</button>`
+        document.getElementById("game").innerHTML+=`<button type="submit" class="button resetBtn is-hidden-mobile" style="margin-left: 15px;" onclick="reset('${x}','${y}')">Reset</button>`
+        document.getElementById("game").innerHTML+=`<button type="submit" class="button showSolutionbtn is-hidden-mobile" style="margin-left: 15px;" id="showSol" onclick="showSolution('${type}','${x}','${y}')">Mostra soluzioni</button>`
+        //qui sotto metto i cloni dei tre pulsanti sopra, ma metto quelli che saranno visibili sono da mobile
+        document.getElementById("game").innerHTML+=`<br><button type="submit" class="button checkSolutionbtn is-small is-hidden-tablet" onclick="checkSolution('${type}','${x}','${y}')">Controlla</button>`
+        document.getElementById("game").innerHTML+=`<button type="submit" class="button resetBtn is-small is-hidden-tablet" style="margin-left: 15px;" onclick="reset('${x}','${y}')">Reset</button>`
+        document.getElementById("game").innerHTML+=`<button type="submit" class="button showSolutionbtn is-small is-hidden-tablet" style="margin-left: 15px;" id="showSol" onclick="showSolution('${type}','${x}','${y}')">Mostra soluzioni</button>`
+        //@MatteoBax questo qui sopra e' il pulsante mostra soluz. di cui ti ho parlato che non dovrebbe apprarire se non hai almeno 1 volta checkkato le soluz
         document.getElementById("showSol").style.display="none";
 
         document.getElementById("clearBoth").style.display="";
