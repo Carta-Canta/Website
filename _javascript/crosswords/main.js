@@ -17,6 +17,23 @@ for(let i=0;i<cruciverba.length; i++){
     });
 }
 
+async function reset(maxX,maxY){
+    let id="";
+    let i = 0;
+    for(let k=0; k<maxY; k++){
+        for(let j=0; j<maxX; j++){
+            id="x"+j+",y"+k;
+            let isDisabled = document.getElementById(id).disabled;
+            if(!isDisabled){
+                document.getElementById(id).setAttribute("value","");
+                document.getElementById(id).style.borderWidth="1px";
+                document.getElementById(id).style.borderStyle="solid";
+                document.getElementById(id).style.borderColor="hsl(0deg, 0%, 29%)";
+            }
+            i++;
+        }
+    }
+}
 //Genero la tabella del cruciverba in base ai parametri passati alla funzione
 function generate(x,y, type){
     //distruggo l'array delle soluzioni
@@ -81,16 +98,10 @@ function generate(x,y, type){
             document.getElementById(coordinata).setAttribute("value",sol[valY][valX]); // siccome è memorizzato per riga devo fare [y][x]
         }
         document.getElementById("game").innerHTML+=`<br><button type="submit" class="button checkSolutionbtn" onclick="checkSolution('${type}','${x}','${y}')">Controlla</button>`
+        document.getElementById("game").innerHTML+=`<button type="submit" class="button resetBtn" style="margin-left: 15px;" onclick="reset('${x}','${y}')">Reset</button>`
         document.getElementById("game").innerHTML+=`<button type="submit" class="button showSolutionbtn" style="margin-left: 15px;" id="showSol" onclick="showSolution('${type}','${x}','${y}')">Mostra soluzioni</button>`
         document.getElementById("showSol").style.display="none";
-        //Mantengo premuto il bottone per far vedere l'animazione
-        let btn = document.querySelector(".checkSolutionbtn");
-        btn.addEventListener("click",()=>{
-            btn.classList.add('btnActive');
-            setTimeout(()=>{
-                btn.classList.remove('btnActive');
-            },1600)
-        })
+        
         document.getElementById("clearBoth").style.display="";
         document.getElementById("load").style.display="none";
         document.getElementById("game").style.display="block";
