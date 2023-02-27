@@ -17,7 +17,7 @@ for(let i=0;i<cruciverba.length; i++){
     });
 }
 
-async function reset(maxX,maxY){
+function reset(maxX,maxY){
     let id="";
     let i = 0;
     for(let k=0; k<maxY; k++){
@@ -101,7 +101,7 @@ function generate(x,y, type){
         document.getElementById("game").innerHTML+=`<button type="submit" class="button resetBtn" style="margin-left: 15px;" onclick="reset('${x}','${y}')">Reset</button>`
         document.getElementById("game").innerHTML+=`<button type="submit" class="button showSolutionbtn" style="margin-left: 15px;" id="showSol" onclick="showSolution('${type}','${x}','${y}')">Mostra soluzioni</button>`
         document.getElementById("showSol").style.display="none";
-        
+
         document.getElementById("clearBoth").style.display="";
         document.getElementById("load").style.display="none";
         document.getElementById("game").style.display="block";
