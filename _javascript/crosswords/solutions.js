@@ -61,6 +61,7 @@ async function checkSolution(type, maxX, maxY){
         
     }else{
         document.getElementById("showSol").style.display="inline-block";
+        document.getElementById("showSolMobile").style.display="inline-block";
     }
 }
 
